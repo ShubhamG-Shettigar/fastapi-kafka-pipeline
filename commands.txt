@@ -1,0 +1,10 @@
+server start -> Kafka folder
+bin/kafka-server-start.sh config/kraft/server.properties
+
+
+producer start -> FastAPI folder
+uvicorn main:app --reload
+
+
+consumer start -> FastAPI folder
+python kafka_consumer.py
