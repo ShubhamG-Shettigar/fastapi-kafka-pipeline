@@ -63,4 +63,4 @@ SQLite Database
 Daily engineering learnings and interview scenarios are documented inside:
 
 ```text
-learning-journal/
+learning/
