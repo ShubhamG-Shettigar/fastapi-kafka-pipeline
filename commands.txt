@@ -1,10 +1,8 @@
-server start -> Kafka folder
+Step 1. Server start inside Kafka folder
 bin/kafka-server-start.sh config/kraft/server.properties
 
-
-producer start -> FastAPI folder
+Step 2. Producer start inside FastAPI folder
 uvicorn main:app --reload
 
-
-consumer start -> FastAPI folder
+Step 3. Consumer start inside FastAPI folder
 python kafka_consumer.py
