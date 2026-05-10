@@ -1,66 +1,48 @@
-# FastAPI Kafka Pipeline 🚀
+# FastAPI + Kafka Pipeline 🚀
 
-A backend learning project focused on integrating FastAPI with Apache Kafka and databases while understanding real-world backend engineering concepts.
+A learning-based backend project to understand real-world Kafka behavior using FastAPI, Python consumers, and database integration.
 
 ---
 
-## 📌 Project Overview
-
-Current working architecture:
-
-Client  
-↓  
-FastAPI API  
-↓  
-Kafka Producer  
-↓  
-Kafka Broker  
-↓  
-Python Consumer  
-↓  
+## 📌 Architecture
+Client
+↓
+FastAPI (API Layer)
+↓
+Kafka Producer
+↓
+Kafka Broker (KRaft mode)
+↓
+Python Consumer
+↓
 SQLite Database
 
----
-
-## ⚙️ Tech Stack
-
-- Python
-- FastAPI
-- Apache Kafka
-- SQLite
-- kafka-python
 
 ---
 
-## 🧠 Concepts Explored
+## ⚙️ Current State
 
-- Kafka Producers & Consumers
-- Consumer Groups & Offsets
-- Serialization & Deserialization
-- FastAPI Request Validation
-- Kafka Partitions
-- Logging & Debugging
-- Retry & Reprocessing Concepts
-- At-least-once Processing
-- Real-world Failure RCA
+- FastAPI endpoint to publish messages to Kafka
+- Kafka producer-consumer pipeline working
+- Python consumer processing messages and storing in SQLite DB
+- Manual offset commit implemented
+- Experiments done on consumer crash and message reprocessing
 
 ---
 
-## 🛠️ Current Features
+## 🧠 Focus Area (Current Learning)
 
-- FastAPI POST endpoint
-- Kafka producer integration
-- Kafka consumer integration
-- SQLite DB insertion
-- JSON serialization/deserialization
-- Structured logging
-- Error handling basics
+- Kafka offset commit behavior (manual vs auto)
+- At-least-once delivery understanding
+- Consumer crash recovery scenarios
+- Handling duplicate message processing
 
 ---
 
-## 📚 Learning Journal
+## 🚀 Future Vision
 
-Daily engineering learnings and interview scenarios are documented inside:
-
-```text
-learning/
+- Implement idempotent consumer design (no duplicate DB writes)
+- Improve reliability patterns (production-grade Kafka handling)
+- Explore async vs sync commit strategies
+- Add scalable multi-consumer setup
+- Containerize system using Docker
