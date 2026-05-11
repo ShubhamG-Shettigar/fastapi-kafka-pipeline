@@ -1,5 +1,5 @@
 from kafka import KafkaProducer
-import json
+import json, uuid
 
 producer = KafkaProducer(
     bootstrap_servers="localhost:9092",

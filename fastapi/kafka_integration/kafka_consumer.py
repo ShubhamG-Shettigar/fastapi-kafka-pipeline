@@ -27,8 +27,8 @@ for message in consumer:
         cursor = conn.cursor()
         logging.info("Connected to DB successfully")
         logging.info("Cautious!!!! DB insert ongoing")
-        cursor.execute("Insert into shubham (name, surname) VALUES (?,?)",
-                   (data["name"], data["surname"]))
+        cursor.execute("Insert into shubham (name, surname, message_id) VALUES (?,?,?)",
+                   (data["name"], data["surname"], data["message_id"]))
         logging.info("Hurray!!!! DB insert done")
        
         #logging.info("Cautious!!!! DB commit ongoing")

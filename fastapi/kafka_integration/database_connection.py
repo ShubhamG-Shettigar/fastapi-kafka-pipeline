@@ -11,7 +11,8 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS shubham (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
-    surname TEXT
+    surname TEXT,
+    message_id TEXT UNIQUE
 )
 """)
 
