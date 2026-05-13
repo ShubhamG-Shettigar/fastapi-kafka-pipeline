@@ -37,6 +37,12 @@ for message in consumer:
         consumer.commit()
         logging.info(f"Consumer has committed offset = {message.offset}")
         #logging.info("Hurray!!!! DB commit done")
+    
+    except sqlite3.IntegrityError:
+        logging.info("Duplicate message ignored safely")
+        consumer.commit()
+        logging.warning("A duplicate message was now committed")
+
     except Exception as e:
-        logging.error(f"Some error occurred:{e}")
+        logging.error(f"Real processing failure: {e}")
     
