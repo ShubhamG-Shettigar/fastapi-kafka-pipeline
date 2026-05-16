@@ -15,7 +15,7 @@ app = FastAPI()
 async def send_data(data: User):
     data = data.dict()
     data["message_id"] = str(uuid.uuid4())
-    send_to_kafka("shubham", data)
+    send_to_kafka("orders", data)
 
     return {
         "status": "sent to kafka",

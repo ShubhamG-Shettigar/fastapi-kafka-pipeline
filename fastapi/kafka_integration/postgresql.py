@@ -3,8 +3,7 @@ import psycopg2
 conn = psycopg2.connect(
     host="localhost",
     database="kafka_project",
-    user="postgres
-    ",
+    user="postgres",
     password="postgresql",
     port="5432"
 )

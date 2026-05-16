@@ -1,48 +1,49 @@
-# FastAPI + Kafka Pipeline 🚀
+# FastAPI Kafka Pipeline 🚀
 
-A learning-based backend project to understand real-world Kafka behavior using FastAPI, Python consumers, and database integration.
+A scalable event-driven backend system built using:
 
----
-
-## 📌 Architecture
-Client
-↓
-FastAPI (API Layer)
-↓
-Kafka Producer
-↓
-Kafka Broker (KRaft mode)
-↓
-Python Consumer
-↓
-SQLite Database
-
+* FastAPI
+* Apache Kafka
+* PostgreSQL
 
 ---
 
-## ⚙️ Current State
+## Current Architecture
 
-- FastAPI endpoint to publish messages to Kafka
-- Kafka producer-consumer pipeline working
-- Python consumer processing messages and storing in SQLite DB
-- Manual offset commit implemented
-- Experiments done on consumer crash and message reprocessing
+FastAPI → Kafka Producer → Partitioned Kafka Topic → Consumer Group → PostgreSQL
 
 ---
 
-## 🧠 Focus Area (Current Learning)
+## Current Features
 
-- Kafka offset commit behavior (manual vs auto)
-- At-least-once delivery understanding
-- Consumer crash recovery scenarios
-- Handling duplicate message processing
+* Event-driven API architecture
+* Kafka producer/consumer integration
+* Manual offset commits
+* Idempotent consumer handling
+* PostgreSQL persistence
+* Multi-consumer scaling
+* Consumer group rebalancing experiments
+* Partition-based parallel processing
 
 ---
 
-## 🚀 Future Vision
+## Key Concepts Implemented
 
-- Implement idempotent consumer design (no duplicate DB writes)
-- Improve reliability patterns (production-grade Kafka handling)
-- Explore async vs sync commit strategies
-- Add scalable multi-consumer setup
-- Containerize system using Docker
+* At-least-once semantics
+* Idempotent event processing
+* Kafka consumer groups
+* Sticky partitioning
+* Partition ownership and rebalancing
+* Distributed event consumption
+
+---
+
+## Future Vision
+
+* Retry mechanism
+* Dead Letter Queue (DLQ)
+* Dockerization
+* Load testing
+* Monitoring and observability
+* Kubernetes deployment
+* Production-grade distributed backend system
