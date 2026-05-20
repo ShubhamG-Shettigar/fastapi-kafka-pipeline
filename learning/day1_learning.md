@@ -51,7 +51,11 @@ Fix:
 - Removed stale lock files (.lock inside kafka folder)
 - Deleted corrupted __consumer_offsets-* folders
 - Restarted broker cleanly
-
+- Format storage command to freshly create kraft-combined-logs
+Run inside kafka folder
+```bash
+a. bin/kafka-storage.sh random-uuid 
+b. bin/kafka-storage.sh format -t <uuid> -c config/kraft/server.properties
 ---
 
 ## Overall Understanding
