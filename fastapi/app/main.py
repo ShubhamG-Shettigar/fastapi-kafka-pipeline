@@ -1,7 +1,9 @@
 from fastapi import FastAPI
-from kafka_producer import send_to_kafka
+#from kafka_producer import send_to_kafka
 from pydantic import BaseModel
 import uuid
+from app.kafka.producer import producer, send_to_kafka
+
 
 class User(BaseModel):
     name: str
