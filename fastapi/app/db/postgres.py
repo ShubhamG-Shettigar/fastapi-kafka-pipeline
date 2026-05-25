@@ -8,22 +8,23 @@ conn = psycopg2.connect(
     port="5432"
 )
 
-print("Connected to PostgreSQL successfully!")
+#print("Connected to PostgreSQL successfully!")
 
 cursor = conn.cursor()
 
 cursor.execute("""
-CREATE TABLE IF NOT EXISTS test_users (
+CREATE TABLE IF NOT EXISTS auth_users (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100)
+    username VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
 )
 """)
 
 conn.commit()
 
-print("Table created successfully!")
+#print("Table created successfully!")
 
-cursor.close()
-conn.close()
+#cursor.close()
+#conn.close()
 
-print("Connection closed.")
+#print("Connection closed.")
