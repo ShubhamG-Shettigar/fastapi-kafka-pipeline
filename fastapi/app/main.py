@@ -5,21 +5,14 @@ from pydantic import BaseModel
 import uuid
 from kafka_client.producer import producer, send_to_kafka
 from db.postgres import conn, cursor
+from routes.auth_routes import router as auth_router
 
 class User(BaseModel):
     name: str
     surname: str
-
-class UserSignup(BaseModel):
-    username: str
-    password: str
-    
-class UserLogin(BaseModel):
-    username: str
-    password: str
     
 app = FastAPI()
-
+app.include_router(auth_router, prefix="/auth")
 
 @app.post("/send")
 async def send_data(data: User):
@@ -56,29 +49,3 @@ def protected_route(authorization: str = Header(None)):
         )
         
 #cursor = conn.cursor()   
-@app.post("/signup")
-def signup(user: UserSignup):
-    hashed =hash_password(user.password)
-    print("Password Hashed")
-    
-    cursor.execute("Insert into auth_users (username, password) values (%s, %s)", (user.username, hashed))
-    try:
-        conn.commit()
-    except:
-        conn.rollback()
-    print("Hashed password stored in DB")
-    return{"message":"User registered successfully"}
-    
-    
-@app.post("/login")
-def login(user: UserLogin):
-    cursor.execute("Select password from auth_users where username=%s", (user.username,))
-    result = cursor.fetchone()
-    if not result:
-        return {"message":"User not found"}
-    stored_hash = result[0]
-    is_valid = verify_password(user.password, stored_hash)
-    if not is_valid:
-        return {"message":"Invalid password"}
-    token = create_access_token({"sub":user.username})
-    return {"access_token": token}

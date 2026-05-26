@@ -9,8 +9,10 @@ conn = psycopg2.connect(
 )
 
 #print("Connected to PostgreSQL successfully!")
-
-cursor = conn.cursor()
+def get_cursor():
+    return conn.cursor()
+    
+cursor = get_cursor()
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS auth_users (
