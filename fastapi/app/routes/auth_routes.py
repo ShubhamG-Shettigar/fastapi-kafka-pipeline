@@ -1,7 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 
-from db.postgres import conn, get_cursor
+from db.postgres import conn, get_cursor, get_db
 from services.auth import (
     hash_password,
     verify_password,
@@ -21,8 +21,8 @@ class UserLogin(BaseModel):
 router = APIRouter()
 
 @router.post("/signup")
-def signup(user: UserSignup):
-    cursor = get_cursor()
+def signup(user: UserSignup, cursor = Depends(get_db)):
+    
     hashed =hash_password(user.password)
     print("Password Hashed")
     

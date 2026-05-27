@@ -1,4 +1,5 @@
 import psycopg2
+from fastapi import Depends
 
 conn = psycopg2.connect(
     host="localhost",
@@ -8,6 +9,13 @@ conn = psycopg2.connect(
     port="5432"
 )
 
+def get_db():
+    cursor = conn.cursor()
+    try:
+        yield cursor
+    finally:
+        cursor.close()
+        
 #print("Connected to PostgreSQL successfully!")
 def get_cursor():
     return conn.cursor()
