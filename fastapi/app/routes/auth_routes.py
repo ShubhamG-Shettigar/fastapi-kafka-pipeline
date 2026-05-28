@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
-
 from db.postgres import conn, get_cursor, get_db
 from services.auth import (
     hash_password,
@@ -8,6 +7,7 @@ from services.auth import (
     create_access_token,
     verify_token
 )
+import asyncio
 
 
 class UserSignup(BaseModel):
@@ -20,8 +20,25 @@ class UserLogin(BaseModel):
 
 router = APIRouter()
 
+
+#Testing async operations
+@router.get("/test-async")
+async def test_async():
+
+    import time
+
+    print(f"Start: {time.time()}")
+
+    await asyncio.sleep(10)
+
+    print(f"End: {time.time()}")
+
+    return {"message": "done"}
+    
+    
+    
 @router.post("/signup")
-def signup(user: UserSignup, cursor = Depends(get_db)):
+async def signup(user: UserSignup, cursor = Depends(get_db)):
     
     hashed =hash_password(user.password)
     print("Password Hashed")
