@@ -5,29 +5,64 @@ A scalable event-driven backend system built using:
 * FastAPI
 * Apache Kafka
 * PostgreSQL
+* JWT Authentication
 
 ---
 
-## Current Architecture
+# Current Architecture
 
-FastAPI → Kafka Producer → Partitioned Kafka Topic → Consumer Group → PostgreSQL
+Client → FastAPI → Kafka Producer → Partitioned Kafka Topic → Consumer Group → PostgreSQL
 
 ---
 
-## Current Features
+# Current Features
 
-* Event-driven API architecture
+## Backend Features
+
+* JWT-based authentication
+* User signup/login APIs
+* Protected API routes
+* Modular FastAPI architecture
+* Dependency Injection (`Depends`)
+* Middleware fundamentals
+* Async request handling basics
+
+---
+
+## Kafka Features
+
 * Kafka producer/consumer integration
 * Manual offset commits
-* Idempotent consumer handling
-* PostgreSQL persistence
 * Multi-consumer scaling
 * Consumer group rebalancing experiments
 * Partition-based parallel processing
+* Idempotent consumer handling
 
 ---
 
-## Key Concepts Implemented
+## Database Features
+
+* PostgreSQL persistence
+* Secure password hashing
+* Transaction handling basics
+* Connection/cursor lifecycle understanding
+
+---
+
+# Key Concepts Implemented
+
+## Backend Concepts
+
+* Request lifecycle
+* Middleware basics
+* Dependency Injection
+* JWT token verification
+* Async vs sync processing
+* Blocking vs non-blocking IO
+
+---
+
+## Distributed Systems Concepts
 
 * At-least-once semantics
 * Idempotent event processing
@@ -38,12 +73,27 @@ FastAPI → Kafka Producer → Partitioned Kafka Topic → Consumer Group → Po
 
 ---
 
-## Future Vision
+# Future Vision
 
+* Refresh token implementation
 * Retry mechanism
 * Dead Letter Queue (DLQ)
+* SQLAlchemy integration
+* Async database handling
 * Dockerization
 * Load testing
 * Monitoring and observability
 * Kubernetes deployment
 * Production-grade distributed backend system
+
+---
+
+# Learning Goals
+
+This project is focused on learning:
+
+* backend engineering fundamentals
+* distributed systems
+* event-driven architecture
+* scalable microservice patterns
+* production-oriented backend design
