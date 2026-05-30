@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, BackgroundTasks
 from pydantic import BaseModel
 from db.postgres import conn, get_cursor, get_db
 from services.auth import (
@@ -7,7 +7,7 @@ from services.auth import (
     create_access_token,
     verify_token
 )
-import asyncio
+import asyncio, time
 
 
 class UserSignup(BaseModel):
@@ -20,6 +20,12 @@ class UserLogin(BaseModel):
 
 router = APIRouter()
 
+
+def send_email():
+    print("Task started")
+    for i in range(10):
+        print(i)
+    print("Sending email...")
 
 #Testing async operations
 @router.get("/test-async")
@@ -38,18 +44,21 @@ async def test_async():
     
     
 @router.post("/signup")
-async def signup(user: UserSignup, cursor = Depends(get_db)):
+async def signup(user: UserSignup, background_tasks:BackgroundTasks, cursor = Depends(get_db)):
+    print("Signup route hit")
+    background_tasks.add_task(send_email)
     
     hashed =hash_password(user.password)
     print("Password Hashed")
     
-    cursor.execute("Insert into auth_users (username, password) values (%s, %s)", (user.username, hashed))
     try:
-        conn.commit()
-    except:
+       cursor.execute("Insert into auth_users (username, password) values (%s, %s)", (user.username, hashed))
+       conn.commit()
+    except Exception as e:
         conn.rollback()
+        return{"exception occured ": str(e)}
         #return {Exception}
-    print("Hashed password stored in DB")
+    #print("Hashed password stored in DB")
     return{"message":"User registered successfully"}
     
     
