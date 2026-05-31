@@ -1,11 +1,11 @@
 from fastapi import APIRouter, HTTPException, Depends, BackgroundTasks
 from pydantic import BaseModel
 from db.postgres import conn, get_cursor, get_db
-from services.auth import (
+from services.auth_service import (
     hash_password,
     verify_password,
     create_access_token,
-    verify_token
+    verify_token, create_user
 )
 import asyncio, time
 
@@ -30,15 +30,10 @@ def send_email():
 #Testing async operations
 @router.get("/test-async")
 async def test_async():
-
     import time
-
     print(f"Start: {time.time()}")
-
     await asyncio.sleep(10)
-
     print(f"End: {time.time()}")
-
     return {"message": "done"}
     
     
@@ -47,18 +42,11 @@ async def test_async():
 async def signup(user: UserSignup, background_tasks:BackgroundTasks, cursor = Depends(get_db)):
     print("Signup route hit")
     background_tasks.add_task(send_email)
-    
-    hashed =hash_password(user.password)
-    print("Password Hashed")
-    
     try:
-       cursor.execute("Insert into auth_users (username, password) values (%s, %s)", (user.username, hashed))
-       conn.commit()
+        create_user(user, cursor)
     except Exception as e:
         conn.rollback()
-        return{"exception occured ": str(e)}
-        #return {Exception}
-    #print("Hashed password stored in DB")
+        return {"error": str(e)}
     return{"message":"User registered successfully"}
     
     

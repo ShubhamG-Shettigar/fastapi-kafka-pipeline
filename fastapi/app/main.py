@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Header, HTTPException
-from services.auth import verify_token, hash_password, verify_password, create_access_token
+from services.auth_service import verify_token, hash_password, verify_password, create_access_token
 #from kafka_producer import send_to_kafka
 from pydantic import BaseModel
 import uuid
