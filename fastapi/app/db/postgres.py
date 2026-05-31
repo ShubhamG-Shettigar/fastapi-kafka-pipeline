@@ -21,7 +21,6 @@ def get_cursor():
     return conn.cursor()
     
 cursor = get_cursor()
-
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS auth_users (
     id SERIAL PRIMARY KEY,

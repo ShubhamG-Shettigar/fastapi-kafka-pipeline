@@ -1,25 +1,17 @@
 from fastapi import APIRouter, HTTPException, Depends, BackgroundTasks
-from pydantic import BaseModel
+#from pydantic import BaseModel
 from db.postgres import conn, get_cursor, get_db
+from models.schemas import MessageResponse, UserSignup, UserLogin
 from services.auth_service import (
     hash_password,
     verify_password,
     create_access_token,
     verify_token, create_user
 )
+from psycopg2.errors import UniqueViolation
 import asyncio, time
 
-
-class UserSignup(BaseModel):
-    username: str
-    password: str
-    
-class UserLogin(BaseModel):
-    username: str
-    password: str
-
 router = APIRouter()
-
 
 def send_email():
     print("Task started")
@@ -35,18 +27,23 @@ async def test_async():
     await asyncio.sleep(10)
     print(f"End: {time.time()}")
     return {"message": "done"}
+       
     
-    
-    
-@router.post("/signup")
+@router.post("/signup", response_model=MessageResponse)
 async def signup(user: UserSignup, background_tasks:BackgroundTasks, cursor = Depends(get_db)):
     print("Signup route hit")
     background_tasks.add_task(send_email)
     try:
         create_user(user, cursor)
+        conn.commit()
+        print("DB commit done")
+    except UniqueViolation:
+        conn.rollback()
+        #return {"error": str(e)}
+        raise HTTPException(status_code= 400, detail = "User already exists")
     except Exception as e:
         conn.rollback()
-        return {"error": str(e)}
+        raise HTTPException(status_code = 500, detail= str(e))
     return{"message":"User registered successfully"}
     
     
