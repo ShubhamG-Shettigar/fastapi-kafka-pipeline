@@ -6,3 +6,5 @@ uvicorn main:app --reload
 
 Step 3. Consumer start inside FastAPI folder
 python kafka_consumer.py
+
+
