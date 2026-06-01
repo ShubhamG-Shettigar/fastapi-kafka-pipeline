@@ -10,6 +10,7 @@ from services.auth_service import (
 )
 from psycopg2.errors import UniqueViolation
 import asyncio, time
+from kafka_client.producer import publish_events
 
 router = APIRouter()
 
@@ -31,12 +32,10 @@ async def test_async():
     
 @router.post("/signup", response_model=MessageResponse)
 async def signup(user: UserSignup, background_tasks:BackgroundTasks, cursor = Depends(get_db)):
-    print("Signup route hit")
+    #print("Signup route hit")
     background_tasks.add_task(send_email)
     try:
-        create_user(user, cursor)
-        conn.commit()
-        print("DB commit done")
+        publish_events("signup-events", {"username" : user.username, "password": user.password})
     except UniqueViolation:
         conn.rollback()
         #return {"error": str(e)}

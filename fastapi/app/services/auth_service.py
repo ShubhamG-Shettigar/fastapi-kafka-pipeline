@@ -35,3 +35,4 @@ def create_user(user, cursor):
         (user.username, hashed)
     )
     
+    

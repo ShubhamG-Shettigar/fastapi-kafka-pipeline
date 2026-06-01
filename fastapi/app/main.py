@@ -3,7 +3,7 @@ from services.auth_service import verify_token, hash_password, verify_password, 
 #from kafka_producer import send_to_kafka
 #from pydantic import BaseModel
 import uuid
-from kafka_client.producer import producer, send_to_kafka
+from kafka_client.producer import producer, publish_events
 from db.postgres import conn, cursor
 from routes.auth_routes import router as auth_router
 from models.schemas import User
@@ -12,7 +12,7 @@ app = FastAPI()
 app.include_router(auth_router, prefix="/auth")
 
 @app.post("/send")
-async def send_data(data: User):
+async def publish_events(data: User):
     data = data.dict()
     data["message_id"] = str(uuid.uuid4())
     send_to_kafka("orders", data)

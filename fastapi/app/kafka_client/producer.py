@@ -1,6 +1,5 @@
 from kafka import KafkaProducer
 #from app.kafka.producer import producer
-
 import json, uuid
 
 producer = KafkaProducer(
@@ -8,6 +7,7 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode("utf-8")
 )
 
-def send_to_kafka(topic, data):
+def publish_events(topic, data):
+    print("Publishing kafka event................")
     producer.send(topic, value=data)
     producer.flush()
