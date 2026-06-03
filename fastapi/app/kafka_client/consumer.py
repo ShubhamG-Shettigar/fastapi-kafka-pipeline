@@ -1,6 +1,6 @@
 from kafka import KafkaConsumer, KafkaProducer
-import json, sqlite3, logging, time, psycopg2
-from kafka_client.producer import producer
+import json, sqlite3, logging, time, psycopg2, random
+from kafka_client.producer import producer, publish_events
 from db.postgres import *
 from services.auth_service import create_user, hash_password
 from models.schemas import UserSignup
@@ -36,6 +36,9 @@ for message in consumer:
         print(data, flush=True)
         cursor = get_cursor()
         user = UserSignup(**data)
+        #Implementing transient errors for DLQ logic
+        if random.randint(1,3) == 3:
+            raise Exception("Temporary DB failure")
         create_user(user, cursor)
         conn.commit()
         consumer.commit()
@@ -43,4 +46,11 @@ for message in consumer:
 
     except Exception as e:
         conn.rollback()
+        retry_count = data.get("retry_count", 0)
+        if retry_count<2:
+            data["retry_count"] = retry_count + 1
+            publish_events("signup-events", data)
+        else:
+            publish_events("signup-events-dlq", data)
+        consumer.commit()
         print(f"Error: {e}", flush=True)
