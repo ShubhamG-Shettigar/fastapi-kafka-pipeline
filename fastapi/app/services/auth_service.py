@@ -1,6 +1,6 @@
 #for storing hashed password
 from passlib.context import CryptContext
-from db.postgres import conn
+from app.db.postgres import conn
 #for JWT tokens
 from datetime import datetime, timedelta
 from jose import jwt
@@ -29,7 +29,7 @@ def verify_token(token: str):
     
 def create_user(user, cursor):
     hashed = hash_password(user.password)
-    print("Password Hashed")
+    #print("Password Hashed")
     cursor.execute(
         "Insert into auth_users (username, password) values (%s, %s)",
         (user.username, hashed)

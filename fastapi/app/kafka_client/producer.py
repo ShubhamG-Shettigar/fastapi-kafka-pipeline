@@ -10,4 +10,4 @@ producer = KafkaProducer(
 def publish_events(topic, data):
     print("Publishing kafka event................")
     producer.send(topic, value=data)
-    producer.flush()
+    #producer.flush()

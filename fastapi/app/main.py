@@ -1,12 +1,12 @@
 from fastapi import FastAPI, Header, HTTPException
-from services.auth_service import verify_token, hash_password, verify_password, create_access_token
+from app.services.auth_service import verify_token, hash_password, verify_password, create_access_token
 #from kafka_producer import send_to_kafka
 #from pydantic import BaseModel
 import uuid
-from kafka_client.producer import producer, publish_events
-from db.postgres import conn, cursor
-from routes.auth_routes import router as auth_router
-from models.schemas import User
+from app.kafka_client.producer import producer, publish_events
+from app.db.postgres import conn, cursor
+from app.routes.auth_routes import router as auth_router
+from app.models.schemas import User
 
 app = FastAPI()
 app.include_router(auth_router, prefix="/auth")

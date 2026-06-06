@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends, BackgroundTasks
 #from pydantic import BaseModel
-from db.postgres import conn, get_cursor, get_db
-from models.schemas import MessageResponse, UserSignup, UserLogin
-from services.auth_service import (
+from app.db.postgres import conn, get_cursor, get_db
+from app.models.schemas import MessageResponse, UserSignup, UserLogin
+from app.services.auth_service import (
     hash_password,
     verify_password,
     create_access_token,
@@ -10,7 +10,7 @@ from services.auth_service import (
 )
 from psycopg2.errors import UniqueViolation
 import asyncio, time
-from kafka_client.producer import publish_events
+from app.kafka_client.producer import publish_events
 
 router = APIRouter()
 
