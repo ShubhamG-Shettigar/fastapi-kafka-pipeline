@@ -4,6 +4,7 @@ from app.kafka_client.producer import producer, publish_events
 from app.db.postgres import *
 from app.services.auth_service import create_user, hash_password
 from app.models.schemas import UserSignup
+from app.metrics import (processed_events_total, retry_events_total, dlq_events_total, consumer_lag)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -35,6 +36,7 @@ retry_events = 0
 dlq_events = 0
 
 for message in consumer:
+    consumer_lag.set(0)
     try:
         data = message.value
         print(data, flush=True)
@@ -48,7 +50,9 @@ for message in consumer:
         logging.info("User inserted successfully")
         consumer.commit()
         logging.info(f"Offset committed= {message.offset}")
-        processed_count += 1
+       # processed_count += 1
+       #Replacing with counters
+        processed_events_total.inc()
 
     except Exception as e:
         conn.rollback()
@@ -58,11 +62,15 @@ for message in consumer:
             logging.warning(f"Retrying event... Attempt = {data['retry_count']}")
             logging.info("\n")
             publish_events("signup-events", data)
-            retry_events += 1
+            #retry_events += 1
+            #Replacing with counters
+            retry_events_total.inc()
         else:
             logging.error("Retry limit exhausted.. Moving the event to DLQ")
             publish_events("signup-events-dlq", data)
-            dlq_events += 1
+            #dlq_events += 1
+            #Replacing with counters
+            dlq_events_total.inc()
         consumer.commit()
         logging.error(f"Processing failed: {e}")
     logging.info(f"Stats => processed = {processed_count}, retries = {retry_events}, dlq = {dlq_events}")
