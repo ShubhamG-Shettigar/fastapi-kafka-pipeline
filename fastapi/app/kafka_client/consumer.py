@@ -5,6 +5,7 @@ from app.db.postgres import *
 from app.services.auth_service import create_user, hash_password
 from app.models.schemas import UserSignup
 from app.metrics import (processed_events_total, retry_events_total, dlq_events_total, consumer_lag)
+from prometheus_client import start_http_server
 
 logging.basicConfig(
     level=logging.INFO,
@@ -34,6 +35,9 @@ time.sleep(5)
 processed_count = 0
 retry_events = 0
 dlq_events = 0
+
+start_http_server(8001)
+logging.info("Prometheus metrics server started on port 8001")
 
 for message in consumer:
     consumer_lag.set(0)
@@ -73,4 +77,5 @@ for message in consumer:
             dlq_events_total.inc()
         consumer.commit()
         logging.error(f"Processing failed: {e}")
-    logging.info(f"Stats => processed = {processed_count}, retries = {retry_events}, dlq = {dlq_events}")
+    #logging.info(f"Stats => processed = {processed_count}, retries = {retry_events}, dlq = {dlq_events}")
+    logging.info(f"Stats => processed = {processed_events_total}, retries = {retry_events_total}, dlq = {dlq_events_total}")
