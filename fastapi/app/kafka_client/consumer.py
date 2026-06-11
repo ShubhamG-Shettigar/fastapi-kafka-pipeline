@@ -47,7 +47,7 @@ for message in consumer:
         cursor = get_cursor()
         user = UserSignup(**data)
         #Implementing transient errors for DLQ logic
-        if random.randint(1,2) == 2:
+        if random.randint(1,20) == 2:
             raise Exception("Temporary DB failure")
         create_user(user, cursor)
         conn.commit()
