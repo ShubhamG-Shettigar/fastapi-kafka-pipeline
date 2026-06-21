@@ -6,6 +6,8 @@ Done -> Data Engineer interview -> https://www.linkedin.com/posts/ajay026_commen
 
 Done -> 15 Quality Backend questions -> https://www.linkedin.com/posts/aakash-dabi_one-of-my-friends-faced-8-rejections-in-backend-share-7456299771809607680-jMNe?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
 
+
+
 Terraform Questions -> https://www.linkedin.com/posts/sunil-chouhan-07a45b36b_terraform-interview-preparation-ugcPost-7441788827305922560-QLZe?utm_source=share&utm_medium=member_android&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis
 
 Terraform Questions -> https://www.linkedin.com/posts/dipakshekokar_these-are-the-exact-terraform-questions-asked-share-7441337666517864450-SvfC?utm_source=share&utm_medium=member_android&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis
@@ -13,8 +15,6 @@ Terraform Questions -> https://www.linkedin.com/posts/dipakshekokar_these-are-th
 25 SQL questions -> https://www.linkedin.com/posts/raunakyadush_referrals-careers-querylogic-share-7449658089508614145-wot_?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
 
 Data Engineer -> https://www.linkedin.com/posts/dhanasekaran4563_tredence-inc-%F0%9D%97%A2%F0%9D%97%B3%F0%9D%97%B3%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B2%F0%9D%97%B1-my-friend-a-share-7457271340388200448-Shkm?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
-
-
 
 https://www.linkedin.com/posts/rabi-sankar-mahata_deloitte-70-rounds-are-sql-python-share-7457738708843417600-1FiE?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
 
@@ -41,6 +41,134 @@ https://www.linkedin.com/posts/shubhamdangii_walmart-data-engineer-interview-ctc
 https://www.linkedin.com/posts/arpita-kumari_kafka-backendengineering-java-share-7462223066522214401-ZQi4?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
 
 https://www.linkedin.com/posts/roopalsharma0310_naukri-jobsearch-careertips-share-7462383723792011264-kYGK?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/shubhamwadekar_jobs-hiring-share-7465040264378687492-cFq4?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/shauryaprataps_if-you-want-to-get-good-at-system-design-ugcPost-7466581012932775936-RWmD?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/thecreatorsir_if-you-want-to-become-good-at-system-design-share-7467795355024150528-i0c8?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/aryan-raskar-077640253_if-i-had-to-start-learning-system-design-share-7468611522022502401-2Bug?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/rajatgajbhiye_walmart-interviewer-tell-me-how-you-stop-share-7459963789841563648-RxuP?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/rajatgajbhiye_round-3-at-walmart-broke-me-the-interviewer-share-7462150523857809409-kQiT?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/rajatgajbhiye_bookmyshow-interviewer-how-do-you-stop-two-share-7469025758414499840-85Sz?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/rajatgajbhiye_round-3-at-netflix-broke-me-the-interviewer-share-7466130418497511424-VI1z?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/aryan-raskar-077640253_uber-interviewer-asked-one-question-no-system-share-7470469739392360449-sDdR?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/rajatgajbhiye_first-time-i-froze-lost-33lpa-offer-second-share-7461787394825183232-yzHQ?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://medium.com/@kotiavula6/i-thought-kafka-was-just-a-message-queue-83c5135420a7
+
+https://www.linkedin.com/posts/aryan-raskar-077640253_round-2-at-jpmorganchase-broke-me-the-interviewer-share-7472279017107230720-_Hxi?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/harish-kavire-272060189_businessanalyst-share-7471068631494246400-ENI1?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+https://www.linkedin.com/posts/aryan-raskar-077640253_system-design-interview-practice-1-design-share-7473729865545007105-Sxy_?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
+
+Inner join 
+
+Having vs where vs on
+
+All types of joins
+
+If I have 2 duplicate table Table A and Table B having one column(column_name) and 4 records shown below. 02 AB Column_name Column_name 11 11 Null Null Null Null 03 ← What would be the number of records for below Queries - Select count(*) from A inner join B on A.column_name=B.column_name
+
+The online book store has two tables in its database: 1. customers (customer_id, name, email), 2. orders(order_id, customer_id, order_date, total_amount) based on above schema identify the queries which retrieve email and name of customers who have placed orders along with order details where total order amount is more than 500.
+
+You have a website_logs table with user_id and page_id columns. This table logs website visits as per following datasets-
+
+user_id,page_id
+
+"u01","p01"
+
+"u01","p01"
+
+"u01","p01"
+
+"u02","p01"
+
+"u03","p02"
+
+"u02","p01"
+
+"u04","p02"
+
+Which query will identify users and page who visited the page only one time?
+
+A university database includes a courses table and a registrations table. courses table (course_id, course_name, department) registrations table (student_id, course_id, semester) Which SQL query correctly identifies courses that have never been registered by any student?
+
+If I have 2 duplicate table Table A and Table B having one column(column_name) and 4 records shown below.  AB Column_name Column_name 11 11 Null Null Null Null What would be the number of records for below Queries - Select count(*) from A left outer join B on A.column_name=B.column_name
+
+Which query will identify product categories that have no products currently available?
+
+INSERT INTO employees VALUES
+
+0
+
+(1, 'John', 'Doe', 101, '2015-03-15', 80000, NULL),
+
+(2, 'Jane', 'Smith', 102, '2017-06-20', 95000, 1),
+
+(3, 'Emily', 'Davis', 101, '2018-09-12', 70000, 1),
+
+(4, 'Michael', 'Brown', 103, '2016-05-25', 110000, 2),
+
+(5, 'Chris', 'Wilson', 102, '2019-07-01', 60000, 2);
+
+TABLE departments (department_id, department_name);
+
+INSERT INTO departments VALUES
+
+(101, 'Engineering'),
+
+(102, 'Sales'),
+
+(103, 'HR');
+
+TABLE projects (project_id, project_name, department_id);
+
+INSERT INTO projects VALUES
+
+(1, 'Al Development', 101),
+
+(2, 'Market Expansion', 102),
+
+(3, 'Employee Training', 103);
+
+TABLE tasks (task_id, task_name, project_id);
+
+INSERT INTO tasks VALUES
+
+(1, 'Data Cleaning', 1),
+
+(2, 'Model Training', 1),
+
+(3, 'Client Outreach', 2),
+
+(4, 'Workshop', 3);
+
+Find all tasks assigned to employees in the 'Sales' department
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Backend Engineer
