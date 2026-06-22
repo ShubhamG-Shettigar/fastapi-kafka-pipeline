@@ -70,101 +70,14 @@ https://www.linkedin.com/posts/harish-kavire-272060189_businessanalyst-share-747
 
 https://www.linkedin.com/posts/aryan-raskar-077640253_system-design-interview-practice-1-design-share-7473729865545007105-Sxy_?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADZhfQwBsrU_a2T8U3D73D_O0LP6NwXyJis&utm_campaign=whatsapp
 
-Inner join 
-
-Having vs where vs on
-
-All types of joins
-
-If I have 2 duplicate table Table A and Table B having one column(column_name) and 4 records shown below. 02 AB Column_name Column_name 11 11 Null Null Null Null 03 ← What would be the number of records for below Queries - Select count(*) from A inner join B on A.column_name=B.column_name
-
-The online book store has two tables in its database: 1. customers (customer_id, name, email), 2. orders(order_id, customer_id, order_date, total_amount) based on above schema identify the queries which retrieve email and name of customers who have placed orders along with order details where total order amount is more than 500.
-
-You have a website_logs table with user_id and page_id columns. This table logs website visits as per following datasets-
-
-user_id,page_id
-
-"u01","p01"
-
-"u01","p01"
-
-"u01","p01"
-
-"u02","p01"
-
-"u03","p02"
-
-"u02","p01"
-
-"u04","p02"
-
-Which query will identify users and page who visited the page only one time?
-
-A university database includes a courses table and a registrations table. courses table (course_id, course_name, department) registrations table (student_id, course_id, semester) Which SQL query correctly identifies courses that have never been registered by any student?
-
-If I have 2 duplicate table Table A and Table B having one column(column_name) and 4 records shown below.  AB Column_name Column_name 11 11 Null Null Null Null What would be the number of records for below Queries - Select count(*) from A left outer join B on A.column_name=B.column_name
-
-Which query will identify product categories that have no products currently available?
-
-INSERT INTO employees VALUES
-
-0
-
-(1, 'John', 'Doe', 101, '2015-03-15', 80000, NULL),
-
-(2, 'Jane', 'Smith', 102, '2017-06-20', 95000, 1),
-
-(3, 'Emily', 'Davis', 101, '2018-09-12', 70000, 1),
-
-(4, 'Michael', 'Brown', 103, '2016-05-25', 110000, 2),
-
-(5, 'Chris', 'Wilson', 102, '2019-07-01', 60000, 2);
-
-TABLE departments (department_id, department_name);
-
-INSERT INTO departments VALUES
-
-(101, 'Engineering'),
-
-(102, 'Sales'),
-
-(103, 'HR');
-
-TABLE projects (project_id, project_name, department_id);
-
-INSERT INTO projects VALUES
-
-(1, 'Al Development', 101),
-
-(2, 'Market Expansion', 102),
-
-(3, 'Employee Training', 103);
-
-TABLE tasks (task_id, task_name, project_id);
-
-INSERT INTO tasks VALUES
-
-(1, 'Data Cleaning', 1),
-
-(2, 'Model Training', 1),
-
-(3, 'Client Outreach', 2),
-
-(4, 'Workshop', 3);
-
-Find all tasks assigned to employees in the 'Sales' department
 
 
+FOR ACN
 
-
-
-
-
-
-
-
-
-
+https://www.ambitionbox.com/skills/kafka-interview-questions
+https://www.guru99.com/kafka-interview-questions.html
+https://www.geeksforgeeks.org/apache-kafka/kafka-interview-questions/
+https://www.linkedin.com/pulse/kafka-interview-questions-experienced-developers-khadishi-rkcmf/
 
 
 
