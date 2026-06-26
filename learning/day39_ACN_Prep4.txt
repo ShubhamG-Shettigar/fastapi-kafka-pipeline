@@ -1,0 +1,34 @@
+Microservices/EDA (Synchronous (REST) vs Asynchronous (Kafka), 
+why Kafka instead of REST, 
+N+1 query problem 
+EDA patterns
+(1. Event notification (just events with id then make a REST call to get the actual data -> Leads to N+1 query problem),
+2. Event-carried state transfer -> Pass event id and data together
+3. Competing consumers -> Consumer group, consumer instances, 1 instance reads the event from each partition, no duplicate reads,
+4. Pub-sub, GCP, Event Bridge,
+5. request-response model using kafka (post into topics using correlation id) 
+6. CQRS (Command Query Responsibility Segregation) with same db (different RW model) and with different DB, Eventual Consistency/Stale Read
+7. Saga Pattern -> Compensating TXN -> Choreography and Orchestration modes (instead of Atomicity Rollback, invoke a new event to reverse the failed txn)
+8. Outbox Pattern )
+EDA benefits
+when not to use Kafka, 
+Kafka vs Rabbit MQ vs SQS/SNS vs Redis PUB/Sub
+
+
+
+
+COALESCE
+NULL-specific Interview Traps
+SELF JOIN
+NATURAL JOIN
+CROSS JOIN
+CTE syntax
+Idempotency in Producer, transactions in normal producer and in streams
+https://www.linkedin.com/pulse/kafka-interview-questions-experienced-developers-khadishi-rkcmf/
+https://www.geeksforgeeks.org/apache-kafka/kafka-interview-questions/ 
+Kafka Security 
+Kafka Integration with Spark, Kubernetes 
+MQTT vs Kafka 
+Zookeeper vs Kraft 
+ORMs in SQL (SQLAlchemy) 
+https://www.guru99.com/kafka-interview-questions.html

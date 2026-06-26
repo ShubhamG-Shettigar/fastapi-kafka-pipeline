@@ -10,7 +10,9 @@ https://www.ambitionbox.com/skills/kafka-interview-questions
 
 
 
-5. Microservices/EDA (Synchronous (REST) vs Asynchronous(Kafka), why Kafka instead of REST, when not to use Kafka, Alternatives of Kafka, EDA benefits)
+5. 
+Joins pending -> Continue in Personal Laptop GPT
+Microservices/EDA (Synchronous (REST) vs Asynchronous(Kafka), why Kafka instead of REST, when not to use Kafka, Alternatives of Kafka, EDA benefits)
 CTE syntax
 Idempotency in Producer, transactions in normal producer and in streams
 https://www.linkedin.com/pulse/kafka-interview-questions-experienced-developers-khadishi-rkcmf/
