@@ -8,4 +8,11 @@ spark vs flink
 request size vs batch size
 https://www.guru99.com/kafka-interview-questions.html
 https://www.linkedin.com/pulse/kafka-interview-questions-experienced-developers-khadishi-rkcmf/
-https://www.geeksforgeeks.org/apache-kafka/kafka-interview-questions/ 
+https://www.geeksforgeeks.org/apache-kafka/kafka-interview-questions/
+
+
+Broadcast joins
+AQE
+Salting
+Lazy evaluation
+Repartition vs Coalesce 
