@@ -61,3 +61,5 @@ Fix: Run inside kafka folder
 ```bash
 a. bin/kafka-storage.sh random-uuid 
 b. bin/kafka-storage.sh format -t <uuid> -c config/kraft/server.properties
+
+bin/kafka-storage.sh format -t 3NGaSNyjRfWfy7V2bagddQ -c config/kraft/server.properties
