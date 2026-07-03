@@ -7,4 +7,14 @@ uvicorn app.main:app --reload
 Step 3. Consumer start inside FastAPI folder
 python -m app.kafka_client.consumer
 
+Step 4. From prometheus downloads folder
+prometheus.exe --config.file=C:\Users\HP\Desktop\Project\fastapi\prometheus.yml
+
+Uvicorn server -> http://127.0.0.1:8000/docs
+
+http://localhost:8001/ -> a tiny HTTP server inside the consumer process.
+
+http://localhost:9090/query -> Prometheus server -> Scrape metrics from 8001 where consumer exposes the metrics
+and stores time-series + provides UI
+
 
