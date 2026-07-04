@@ -10,6 +10,10 @@ python -m app.kafka_client.consumer
 Step 4. From prometheus downloads folder
 prometheus.exe --config.file=C:\Users\HP\Desktop\Project\fastapi\prometheus.yml
 
+
+
+
+
 Uvicorn server -> http://127.0.0.1:8000/docs
 
 http://localhost:8001/ -> a tiny HTTP server inside the consumer process.
@@ -17,4 +21,15 @@ http://localhost:8001/ -> a tiny HTTP server inside the consumer process.
 http://localhost:9090/query -> Prometheus server -> Scrape metrics from 8001 where consumer exposes the metrics
 and stores time-series + provides UI
 
+Below 3 commands inside kafka/bin folder
+./kafka-topics.sh --create --topic signup-events-dlq --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
+./kafka-topics.sh --list --bootstrap-server localhost:9092
+
+./kafka-topics.sh --delete --topic <topic-name> --bootstrap-server localhost:9092
+
+For KRaft issues
+a. bin/kafka-storage.sh random-uuid 
+b. bin/kafka-storage.sh format -t <uuid> -c config/kraft/server.properties
+
+bin/kafka-storage.sh format -t hzBL6qDlRSyCArVu-FCvrg -c config/kraft/server.properties
