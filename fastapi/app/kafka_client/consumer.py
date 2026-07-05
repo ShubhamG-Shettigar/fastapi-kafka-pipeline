@@ -59,7 +59,7 @@ for message in consumer:
         processed_events_total.inc()
 
     except Exception as e:
-        conn.rollbacdlwk()
+        conn.rollback()
         retry_count = data.get("retry_count", 0)
         if retry_count<1:
             data["retry_count"] = retry_count + 1
