@@ -21,6 +21,8 @@ http://localhost:8001/ -> a tiny HTTP server inside the consumer process.
 http://localhost:9090/query -> Prometheus server -> Scrape metrics from 8001 where consumer exposes the metrics
 and stores time-series + provides UI
 
+http://localhost:3000/ -> Grafana Server
+
 Below 3 commands inside kafka/bin folder
 ./kafka-topics.sh --create --topic signup-events-dlq --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
