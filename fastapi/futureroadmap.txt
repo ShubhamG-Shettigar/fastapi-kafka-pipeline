@@ -1,0 +1,10 @@
+Phase 1: Architecture refactor → clean working baseline ← WE ARE HERE
+Phase 2: Producer reliability — acks, retries, idempotency, ordering, batching
+Phase 3: Kafka internals — partitions, replication, ISR, broker failures
+Phase 4: Realistic events — envelope, nested payloads, event types/versioning
+Phase 5: Schema Registry + schema evolution
+Phase 6: Multiple producers + consumer groups
+Phase 7: Kafka Connect
+Phase 8: Kafka Streams
+Phase 9: Backend depth — PostgreSQL, Redis, auth, testing
+Phase 10: Observability + deployment/production concepts

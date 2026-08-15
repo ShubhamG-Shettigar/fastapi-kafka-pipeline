@@ -3,18 +3,20 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     # Application
-    APP_NAME: str = "Event Driven Backend"
+    app_name: str = "Event Driven Backend"
 
     # Kafka
-    KAFKA_BOOTSTRAP_SERVERS: str = "localhost:9092"
-    KAFKA_ORDERS_TOPIC: str = "orders"
+    kafka_bootstrap_servers: str = "localhost:9092"
+    kafka_orders_topic: str = "orders"
+    kafka_retry_topic: str = "orders-retry"
+    kafka_dlq_topic: str = "orders-dlq"
 
     # PostgreSQL
-    POSTGRES_HOST: str = "localhost"
-    POSTGRES_PORT: int = 5432
-    POSTGRES_DB: str = "postgres"
-    POSTGRES_USER: str = "postgres"
-    POSTGRES_PASSWORD: str = "postgres"
+    postgres_host: str = "localhost"
+    postgres_port: int = 5432
+    postgres_db: str = "kafka_project"
+    postgres_user: str = "postgres"
+    postgres_password: str = "postgresql"
 
     class Config:
         env_file = ".env"
