@@ -12,13 +12,24 @@ def get_connection():
 
 def get_db():
     connection = get_connection()
+    try:
+        yield connection
+    finally:
+        connection.close()
+
+def create_orders_table():
+    connection = get_connection()
     cursor = connection.cursor()
     try:
-        yield cursor
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS orders (
+                id SERIAL PRIMARY KEY,
+                order_id VARCHAR(100) UNIQUE NOT NULL,
+                customer_name VARCHAR(100) NOT NULL,
+                amount NUMERIC(10, 2) NOT NULL
+            )
+        """)
+        connection.commit()
     finally:
         cursor.close()
         connection.close()
-
-def get_cursor():
-    connection = get_connection()
-    return connection.cursor()

@@ -1,9 +1,9 @@
 import json, logging
 from kafka import KafkaConsumer
 from app.configs.settings import settings
-from app.services.retryhandler import handle_failure
+from app.kafka_client.retry_handler import handle_failure
 from app.metrics import processed_events_total
-
+from app.db.postgres import get_connection
 
 logging.basicConfig(
     level=logging.INFO,
@@ -11,6 +11,7 @@ logging.basicConfig(
 )
 consumer = KafkaConsumer(
     settings.kafka_orders_topic,
+    settings.kafka_retry_topic,
     bootstrap_servers=settings.kafka_bootstrap_servers,
     auto_offset_reset="earliest",
     enable_auto_commit=False,
@@ -20,16 +21,33 @@ consumer = KafkaConsumer(
     )
 )
 logging.info("Kafka consumer started")
-
 for message in consumer:
     data = message.value
     try:
         logging.info(f"Received event: {data}")
-        # Event processing will be added here
-        # PostgreSQL/business processing will come later
+        connection = get_connection()
+        cursor = connection.cursor()
+        try:
+            payload = data["payload"]
+            cursor.execute(
+                """
+                INSERT INTO orders (order_id, customer_name, amount)
+                VALUES (%s, %s, %s)
+                """,
+                (
+                    payload["order_id"],
+                    payload["customer_name"],
+                    payload["amount"]
+                )
+            )
+            connection.commit()
+        finally:
+            cursor.close()
+            connection.close()
         processed_events_total.inc()
         consumer.commit()
         logging.info(f"Offset committed = {message.offset}")
+
     except Exception as e:
         logging.error(f"Event processing failed: {e}")
         result = handle_failure(data)

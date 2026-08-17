@@ -7,7 +7,7 @@ producer = KafkaProducer(
     value_serializer=lambda value: json.dumps(value).encode("utf-8")
 )
 
-def publish_event(data, topic = None):
+def publish_events(data, topic = None):
     topic = topic or settings.kafka_orders_topic
     print(f"Publishing Kafka event to {topic}...")
     producer.send(topic,value=data)
