@@ -24,3 +24,8 @@ class EventEnvelope(BaseModel):
     timestamp: datetime
     source: str
     payload: dict[str, Any]
+
+class OrderRequest(BaseModel):
+    order_id: str
+    customer_name: str
+    amount: float

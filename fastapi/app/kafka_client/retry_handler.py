@@ -1,4 +1,4 @@
-from app.kafka_client.producer import publish_event
+from app.kafka_client.producer import publish_events
 from app.configs.settings import settings
 from app.metrics import retry_events_total, dlq_events_total
 
@@ -10,10 +10,10 @@ def handle_failure(data):
         print(
             f"Retrying event... Attempt = {data['retry_count']}"
         )
-        publish_event(data, settings.kafka_retry_topic)
+        publish_events(data, settings.kafka_retry_topic)
         retry_events_total.inc()
         return "moved to retry topic"
     print("Retry limit exhausted. Moving event to DLQ")
-    publish_event(data, settings.kafka_dlq_topic)
+    publish_events(data, settings.kafka_dlq_topic)
     dlq_events_total.inc()
     return "moved to dlq topic"
