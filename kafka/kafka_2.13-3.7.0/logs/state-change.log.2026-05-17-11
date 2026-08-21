@@ -1,0 +1,3 @@
+[2026-05-17 11:07:52,912] INFO [Broker id=1] Transitioning 1 partition(s) to local leaders. (state.change.logger)
+[2026-05-17 11:07:52,919] INFO [Broker id=1] Creating new partition orders_dlq-0 with topic id Frodp-aySnu44D3jzNyFww. (state.change.logger)
+[2026-05-17 11:07:53,011] INFO [Broker id=1] Leader orders_dlq-0 with topic id Some(Frodp-aySnu44D3jzNyFww) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader None and previous leader epoch was -1. (state.change.logger)

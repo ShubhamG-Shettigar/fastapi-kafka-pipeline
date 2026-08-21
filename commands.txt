@@ -38,6 +38,8 @@ b. bin/kafka-storage.sh format -t <uuid> -c config/kraft/server.properties
 
 bin/kafka-storage.sh format -t 7B9ZBQWMRh2kmSUPPwT6DA -c config/kraft/server.properties
 bin/kafka-storage.sh format -t hzBL6qDlRSyCArVu-FCvrg -c config/kraft/server.properties
+bin/kafka-storage.sh format -t 2vysctXrShmVFeUWsK6sRA -c config/kraft/server.properties
+
 
 
 Consumer

@@ -1,0 +1,1001 @@
+[2026-08-21 10:50:45,393] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2026-08-21 10:50:46,087] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2026-08-21 10:50:46,447] INFO [ControllerServer id=1] Starting controller (kafka.server.ControllerServer)
+[2026-08-21 10:50:47,481] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+[2026-08-21 10:50:47,585] INFO [SocketServer listenerType=CONTROLLER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(CONTROLLER) (kafka.network.SocketServer)
+[2026-08-21 10:50:47,585] INFO CONTROLLER: resolved wildcard host to DESKTOP-3TNIRTA (org.apache.kafka.metadata.ListenerInfo)
+[2026-08-21 10:50:47,598] INFO authorizerStart completed for endpoint CONTROLLER. Endpoint is now READY. (org.apache.kafka.server.network.EndpointReadyFutures)
+[2026-08-21 10:50:47,598] INFO [SharedServer id=1] Starting SharedServer (kafka.server.SharedServer)
+[2026-08-21 10:50:47,769] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Recovering unflushed segment 0. 0/1 recovered for __cluster_metadata-0. (kafka.log.LogLoader)
+[2026-08-21 10:50:47,785] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:47,785] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 0 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:47,785] INFO Deleted producer state snapshot C:\tmp\kraft-combined-logs\__cluster_metadata-0\00000000000000031109.snapshot (org.apache.kafka.storage.internals.log.SnapshotFile)
+[2026-08-21 10:50:47,785] INFO Deleted producer state snapshot C:\tmp\kraft-combined-logs\__cluster_metadata-0\00000000000000041100.snapshot (org.apache.kafka.storage.internals.log.SnapshotFile)
+[2026-08-21 10:50:47,785] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 0 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:48,800] INFO [ProducerStateManager partition=__cluster_metadata-0] Wrote producer snapshot at offset 41100 with 0 producer ids in 4 ms. (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:48,820] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 41100 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:48,820] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 41100 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:48,820] INFO [ProducerStateManager partition=__cluster_metadata-0] Loading producer state from snapshot file 'SnapshotFile(offset=41100, file=C:\tmp\kraft-combined-logs\__cluster_metadata-0\00000000000000041100.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:48,830] INFO [LogLoader partition=__cluster_metadata-0, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 10ms for snapshot load and 0ms for segment recovery from offset 41100 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:48,922] INFO Initialized snapshots with IDs SortedSet(OffsetAndEpoch(offset=7116, epoch=1), OffsetAndEpoch(offset=20980, epoch=3), OffsetAndEpoch(offset=38224, epoch=5)) from C:\tmp\kraft-combined-logs\__cluster_metadata-0 (kafka.raft.KafkaMetadataLog$)
+[2026-08-21 10:50:49,006] INFO [raft-expiration-reaper]: Starting (kafka.raft.TimingWheelExpirationService$ExpiredOperationReaper)
+[2026-08-21 10:50:49,395] INFO [RaftManager id=1] Completed transition to ResignedState(localId=1, epoch=5, voters=[1], electionTimeoutMs=1434, unackedVoters=[], preferredSuccessors=[]) from null (org.apache.kafka.raft.QuorumState)
+[2026-08-21 10:50:49,411] INFO [RaftManager id=1] Completed transition to CandidateState(localId=1, epoch=6, retries=1, voteStates={1=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1739) from ResignedState(localId=1, epoch=5, voters=[1], electionTimeoutMs=1434, unackedVoters=[], preferredSuccessors=[]) (org.apache.kafka.raft.QuorumState)
+[2026-08-21 10:50:49,411] INFO [RaftManager id=1] Completed transition to Leader(localId=1, epoch=6, epochStartOffset=41100, highWatermark=Optional.empty, voterStates={1=ReplicaState(nodeId=1, endOffset=Optional.empty, lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)}) from CandidateState(localId=1, epoch=6, retries=1, voteStates={1=GRANTED}, highWatermark=Optional.empty, electionTimeoutMs=1739) (org.apache.kafka.raft.QuorumState)
+[2026-08-21 10:50:49,442] INFO [kafka-1-raft-io-thread]: Starting (kafka.raft.KafkaRaftManager$RaftIoThread)
+[2026-08-21 10:50:49,442] INFO [kafka-1-raft-outbound-request-thread]: Starting (org.apache.kafka.raft.KafkaNetworkChannel$SendThread)
+[2026-08-21 10:50:49,486] INFO [MetadataLoader id=1] initializeNewPublishers: The loader is still catching up because we have loaded up to offset -1, but the high water mark is 41101 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,486] INFO [RaftManager id=1] High watermark set to LogOffsetMetadata(offset=41101, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=2936424)]) for the first time for epoch 6 based on indexOfHw 0 and voters [ReplicaState(nodeId=1, endOffset=Optional[LogOffsetMetadata(offset=41101, metadata=Optional[(segmentBaseOffset=0,relativePositionInSegment=2936424)])], lastFetchTimestamp=-1, lastCaughtUpTimestamp=-1, hasAcknowledgedLeader=true)] (org.apache.kafka.raft.LeaderState)
+[2026-08-21 10:50:49,486] INFO [ControllerServer id=1] Waiting for controller quorum voters future (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,486] INFO [ControllerServer id=1] Finished waiting for controller quorum voters future (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,513] INFO [RaftManager id=1] Registered the listener org.apache.kafka.image.loader.MetadataLoader@233846313 (org.apache.kafka.raft.KafkaRaftClient)
+[2026-08-21 10:50:49,553] INFO [MetadataLoader id=1] handleLoadSnapshot(00000000000000038224-0000000005): incrementing HandleLoadSnapshotCount to 1. (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,594] INFO [RaftManager id=1] Registered the listener org.apache.kafka.controller.QuorumController$QuorumMetaLogListener@1422619720 (org.apache.kafka.raft.KafkaRaftClient)
+[2026-08-21 10:50:49,621] INFO [MetadataLoader id=1] handleLoadSnapshot(00000000000000038224-0000000005): generated a metadata delta between offset -1 and this snapshot in 69530 us. (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,621] INFO [MetadataLoader id=1] maybePublishMetadata(SNAPSHOT): The loader is still catching up because we have loaded up to offset 38223, but the high water mark is 41101 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,621] INFO [MetadataLoader id=1] initializeNewPublishers: The loader is still catching up because we have loaded up to offset 38223, but the high water mark is 41101 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,695] INFO [controller-1-ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,767] INFO [controller-1-ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,783] INFO [controller-1-ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,833] INFO [ControllerServer id=1] Waiting for the controller metadata publishers to be installed (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,833] INFO [controller-1-ThrottledChannelReaper-ControllerMutation]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,836] INFO [ExpirationReaper-1-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:49,846] INFO [MetadataLoader id=1] maybePublishMetadata(LOG_DELTA): The loader finished catching up to the current high water mark of 41101 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,846] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing SnapshotGenerator with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,846] INFO [ControllerServer id=1] Finished waiting for the controller metadata publishers to be installed (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,846] INFO [SocketServer listenerType=CONTROLLER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing KRaftMetadataCachePublisher with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing FeaturesPublisher with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO [ControllerServer id=1] Loaded new metadata Features(version=3.7-IV4, finalizedFeatures={metadata.version=19}, finalizedFeaturesEpoch=41100). (org.apache.kafka.metadata.publisher.FeaturesPublisher)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ControllerRegistrationsPublisher with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ControllerRegistrationManager with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing DynamicConfigPublisher controller id=1 with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing DynamicClientQuotaPublisher controller id=1 with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO Awaiting socket connections on 0.0.0.0:9093. (kafka.network.DataPlaneAcceptor)
+[2026-08-21 10:50:49,862] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ScramPublisher controller id=1 with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,862] INFO [ControllerRegistrationManager id=1 incarnation=FG_NKpdlRhe5Y5DEUVN3ew] Found registration for nCCRus-zRGaqk0JWW8dV-g instead of our incarnation. (kafka.server.ControllerRegistrationManager)
+[2026-08-21 10:50:49,874] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing DelegationTokenPublisher controller id=1 with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,874] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing ControllerMetadataMetricsPublisher with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,874] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing AclPublisher controller id=1 with a snapshot at offset 41100 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:49,889] INFO [ControllerServer id=1] Waiting for all of the authorizer futures to be completed (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,889] INFO [ControllerServer id=1] Finished waiting for all of the authorizer futures to be completed (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,889] INFO [ControllerServer id=1] Waiting for all of the SocketServer Acceptors to be started (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,889] INFO [ControllerServer id=1] Finished waiting for all of the SocketServer Acceptors to be started (kafka.server.ControllerServer)
+[2026-08-21 10:50:49,889] INFO [ControllerRegistrationManager id=1 incarnation=FG_NKpdlRhe5Y5DEUVN3ew] initialized channel manager. (kafka.server.ControllerRegistrationManager)
+[2026-08-21 10:50:49,889] INFO [ControllerRegistrationManager id=1 incarnation=FG_NKpdlRhe5Y5DEUVN3ew] sendControllerRegistration: attempting to send ControllerRegistrationRequestData(controllerId=1, incarnationId=FG_NKpdlRhe5Y5DEUVN3ew, zkMigrationReady=false, listeners=[Listener(name='CONTROLLER', host='DESKTOP-3TNIRTA', port=9093, securityProtocol=0)], features=[Feature(name='metadata.version', minSupportedVersion=1, maxSupportedVersion=19)]) (kafka.server.ControllerRegistrationManager)
+[2026-08-21 10:50:49,889] INFO [BrokerServer id=1] Transition from SHUTDOWN to STARTING (kafka.server.BrokerServer)
+[2026-08-21 10:50:49,907] INFO [BrokerServer id=1] Starting broker (kafka.server.BrokerServer)
+[2026-08-21 10:50:49,907] INFO [controller-1-to-controller-registration-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:49,907] INFO [controller-1-to-controller-registration-channel-manager]: Recorded new controller, from now on will use node localhost:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:49,970] INFO [broker-1-ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,970] INFO [broker-1-ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,972] INFO [broker-1-ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:49,972] INFO [broker-1-ThrottledChannelReaper-ControllerMutation]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2026-08-21 10:50:50,030] INFO [BrokerServer id=1] Waiting for controller quorum voters future (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,030] INFO [BrokerServer id=1] Finished waiting for controller quorum voters future (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,030] INFO [broker-1-to-controller-forwarding-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,030] INFO [broker-1-to-controller-forwarding-channel-manager]: Recorded new controller, from now on will use node localhost:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,170] INFO Updated connection-accept-rate max connection creation rate to 2147483647 (kafka.network.ConnectionQuotas)
+[2026-08-21 10:50:50,179] INFO [ControllerRegistrationManager id=1 incarnation=FG_NKpdlRhe5Y5DEUVN3ew] Our registration has been persisted to the metadata log. (kafka.server.ControllerRegistrationManager)
+[2026-08-21 10:50:50,187] INFO [ControllerRegistrationManager id=1 incarnation=FG_NKpdlRhe5Y5DEUVN3ew] RegistrationResponseHandler: controller acknowledged ControllerRegistrationRequest. (kafka.server.ControllerRegistrationManager)
+[2026-08-21 10:50:50,189] INFO [SocketServer listenerType=BROKER, nodeId=1] Created data-plane acceptor and processors for endpoint : ListenerName(PLAINTEXT) (kafka.network.SocketServer)
+[2026-08-21 10:50:50,205] INFO [broker-1-to-controller-alter-partition-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,205] INFO [broker-1-to-controller-alter-partition-channel-manager]: Recorded new controller, from now on will use node localhost:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,221] INFO [broker-1-to-controller-directory-assignments-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,221] INFO [broker-1-to-controller-directory-assignments-channel-manager]: Recorded new controller, from now on will use node localhost:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,263] INFO [ExpirationReaper-1-Produce]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,263] INFO [ExpirationReaper-1-Fetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,263] INFO [ExpirationReaper-1-DeleteRecords]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,270] INFO [ExpirationReaper-1-ElectLeader]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,270] INFO [ExpirationReaper-1-RemoteFetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,295] INFO [ExpirationReaper-1-Heartbeat]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,295] INFO [ExpirationReaper-1-Rebalance]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,464] INFO [broker-1-to-controller-heartbeat-channel-manager]: Starting (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,465] INFO [broker-1-to-controller-heartbeat-channel-manager]: Recorded new controller, from now on will use node localhost:9093 (id: 1 rack: null) (kafka.server.NodeToControllerRequestThread)
+[2026-08-21 10:50:50,472] INFO [BrokerLifecycleManager id=1] Incarnation 7vhU1v52S6-92s4elbRwKA of broker 1 in cluster 7B9ZBQWMRh2kmSUPPwT6DA is now STARTING. (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:50,498] INFO [ExpirationReaper-1-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2026-08-21 10:50:50,522] INFO [BrokerLifecycleManager id=1] Successfully registered broker 1 with broker epoch 41103 (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:50,542] INFO [BrokerLifecycleManager id=1] The broker has caught up. Transitioning from STARTING to RECOVERY. (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:50,551] INFO [BrokerServer id=1] Waiting for the broker metadata publishers to be installed (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,551] INFO [BrokerServer id=1] Finished waiting for the broker metadata publishers to be installed (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,551] INFO [BrokerServer id=1] Waiting for the controller to acknowledge that we are caught up (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,551] INFO [BrokerServer id=1] Finished waiting for the controller to acknowledge that we are caught up (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,551] INFO [BrokerServer id=1] Waiting for the initial broker metadata update to be published (kafka.server.BrokerServer)
+[2026-08-21 10:50:50,551] INFO [MetadataLoader id=1] InitializeNewPublishers: initializing BrokerMetadataPublisher with a snapshot at offset 41103 (org.apache.kafka.image.loader.MetadataLoader)
+[2026-08-21 10:50:50,551] INFO [BrokerMetadataPublisher id=1] Publishing initial metadata at offset OffsetAndEpoch(offset=41103, epoch=6) with metadata.version 3.7-IV4. (kafka.server.metadata.BrokerMetadataPublisher)
+[2026-08-21 10:50:50,556] INFO Loading logs from log dirs ArraySeq(C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,570] INFO [BrokerLifecycleManager id=1] The broker is in RECOVERY. (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:50,623] INFO Skipping recovery of 68 logs from C:\tmp\kraft-combined-logs since clean shutdown file was found (kafka.log.LogManager)
+[2026-08-21 10:50:50,695] INFO [LogLoader partition=orders-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,695] INFO [LogLoader partition=orders-0, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,695] INFO [ProducerStateManager partition=orders-0] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\orders-0\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:50,695] INFO [LogLoader partition=orders-0, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,705] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-0, topicId=QWb9eidDToCOrtn-AU-Gcw, topic=orders, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 79ms (1/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,743] INFO [LogLoader partition=orders-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,743] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-1, topicId=QWb9eidDToCOrtn-AU-Gcw, topic=orders, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 34ms (2/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,779] INFO [LogLoader partition=orders-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,779] INFO [LogLoader partition=orders-2, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,779] INFO [ProducerStateManager partition=orders-2] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\orders-2\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:50,779] INFO [LogLoader partition=orders-2, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,795] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-2, topicId=QWb9eidDToCOrtn-AU-Gcw, topic=orders, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 44ms (3/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,810] INFO [LogLoader partition=orders-dlq-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,826] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-dlq-0, topicId=gtLUh8AOS0eCxYaK89W9Kw, topic=orders-dlq, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 39ms (4/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,869] INFO [LogLoader partition=orders-dlq-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,869] INFO [LogLoader partition=orders-dlq-1, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,869] INFO [ProducerStateManager partition=orders-dlq-1] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\orders-dlq-1\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:50,869] INFO [LogLoader partition=orders-dlq-1, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,886] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-dlq-1, topicId=gtLUh8AOS0eCxYaK89W9Kw, topic=orders-dlq, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 48ms (5/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,896] INFO [LogLoader partition=orders-dlq-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,907] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-dlq-2, topicId=gtLUh8AOS0eCxYaK89W9Kw, topic=orders-dlq, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (6/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,923] INFO [LogLoader partition=orders-retry-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,937] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-retry-0, topicId=fmBDN6uISaaXRtSheBRFRg, topic=orders-retry, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 37ms (7/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,982] INFO [LogLoader partition=orders-retry-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,982] INFO [LogLoader partition=orders-retry-1, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,982] INFO [ProducerStateManager partition=orders-retry-1] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\orders-retry-1\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:50,982] INFO [LogLoader partition=orders-retry-1, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:50,988] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-retry-1, topicId=fmBDN6uISaaXRtSheBRFRg, topic=orders-retry, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 47ms (8/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:50,992] INFO [LogLoader partition=orders-retry-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,008] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\orders-retry-2, topicId=fmBDN6uISaaXRtSheBRFRg, topic=orders-retry, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (9/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,049] INFO [LogLoader partition=signup-events-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 3 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,049] INFO [LogLoader partition=signup-events-0, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 3 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,049] INFO [ProducerStateManager partition=signup-events-0] Loading producer state from snapshot file 'SnapshotFile(offset=3, file=C:\tmp\kraft-combined-logs\signup-events-0\00000000000000000003.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:51,049] INFO [LogLoader partition=signup-events-0, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 3 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,069] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-0, topicId=z_1JlrD8RPOF0OW4IpWc9w, topic=signup-events, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=3) with 1 segments, local-log-start-offset 0 and log-end-offset 3 in 62ms (10/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,118] INFO [LogLoader partition=signup-events-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,118] INFO [LogLoader partition=signup-events-1, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,118] INFO [ProducerStateManager partition=signup-events-1] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\signup-events-1\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:51,118] INFO [LogLoader partition=signup-events-1, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,118] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-1, topicId=z_1JlrD8RPOF0OW4IpWc9w, topic=signup-events, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 53ms (11/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,174] INFO [LogLoader partition=signup-events-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,174] INFO [LogLoader partition=signup-events-2, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,174] INFO [ProducerStateManager partition=signup-events-2] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\signup-events-2\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:51,174] INFO [LogLoader partition=signup-events-2, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,180] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-2, topicId=z_1JlrD8RPOF0OW4IpWc9w, topic=signup-events, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 54ms (12/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,200] INFO [LogLoader partition=signup-events-dlq-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,221] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-dlq-0, topicId=ckFlck06REyKZMeNtFJoaw, topic=signup-events-dlq, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 38ms (13/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,246] INFO [LogLoader partition=signup-events-dlq-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 1 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,246] INFO [LogLoader partition=signup-events-dlq-1, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,246] INFO [ProducerStateManager partition=signup-events-dlq-1] Loading producer state from snapshot file 'SnapshotFile(offset=1, file=C:\tmp\kraft-combined-logs\signup-events-dlq-1\00000000000000000001.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:51,246] INFO [LogLoader partition=signup-events-dlq-1, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 1 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,262] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-dlq-1, topicId=ckFlck06REyKZMeNtFJoaw, topic=signup-events-dlq, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=1) with 1 segments, local-log-start-offset 0 and log-end-offset 1 in 43ms (14/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,270] INFO [LogLoader partition=signup-events-dlq-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,270] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-dlq-2, topicId=ckFlck06REyKZMeNtFJoaw, topic=signup-events-dlq, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (15/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,296] INFO [LogLoader partition=signup-events-retry-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,296] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-retry-0, topicId=C0tfqewMSUe7ecJfkMVJCg, topic=signup-events-retry, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 27ms (16/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,327] INFO [LogLoader partition=signup-events-retry-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,327] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-retry-1, topicId=C0tfqewMSUe7ecJfkMVJCg, topic=signup-events-retry, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 24ms (17/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,365] INFO [LogLoader partition=signup-events-retry-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,365] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\signup-events-retry-2, topicId=C0tfqewMSUe7ecJfkMVJCg, topic=signup-events-retry, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 41ms (18/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,404] INFO [LogLoader partition=__consumer_offsets-0, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,420] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-0, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 52ms (19/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,435] INFO [LogLoader partition=__consumer_offsets-1, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,435] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-1, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 21ms (20/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,456] INFO [LogLoader partition=__consumer_offsets-10, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,470] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-10, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=10, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 20ms (21/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,480] INFO [LogLoader partition=__consumer_offsets-11, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,480] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-11, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=11, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (22/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,495] INFO [LogLoader partition=__consumer_offsets-12, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,495] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-12, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=12, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (23/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,514] INFO [LogLoader partition=__consumer_offsets-13, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,524] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-13, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=13, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 20ms (24/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,533] INFO [LogLoader partition=__consumer_offsets-14, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,543] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-14, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=14, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (25/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,559] INFO [LogLoader partition=__consumer_offsets-15, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,569] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-15, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=15, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (26/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,579] INFO [LogLoader partition=__consumer_offsets-16, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,579] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-16, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=16, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (27/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,625] INFO [LogLoader partition=__consumer_offsets-17, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 3 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,625] INFO [LogLoader partition=__consumer_offsets-17, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 3 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,625] INFO [ProducerStateManager partition=__consumer_offsets-17] Loading producer state from snapshot file 'SnapshotFile(offset=3, file=C:\tmp\kraft-combined-logs\__consumer_offsets-17\00000000000000000003.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:51,630] INFO [LogLoader partition=__consumer_offsets-17, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 5ms for snapshot load and 0ms for segment recovery from offset 3 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,630] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-17, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=17, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=3) with 1 segments, local-log-start-offset 0 and log-end-offset 3 in 45ms (28/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,635] INFO [LogLoader partition=__consumer_offsets-18, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,651] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-18, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=18, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (29/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,666] INFO [LogLoader partition=__consumer_offsets-19, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,670] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-19, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=19, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 20ms (30/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,685] INFO [LogLoader partition=__consumer_offsets-2, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,685] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-2, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (31/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,695] INFO [LogLoader partition=__consumer_offsets-20, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,695] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-20, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=20, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 19ms (32/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,721] INFO [LogLoader partition=__consumer_offsets-21, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,727] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-21, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=21, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 19ms (33/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,738] INFO [LogLoader partition=__consumer_offsets-22, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,738] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-22, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=22, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 26ms (34/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,765] INFO [LogLoader partition=__consumer_offsets-23, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,770] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-23, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=23, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (35/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,780] INFO [LogLoader partition=__consumer_offsets-24, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,780] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-24, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=24, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (36/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,795] INFO [LogLoader partition=__consumer_offsets-25, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,795] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-25, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=25, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (37/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,811] INFO [LogLoader partition=__consumer_offsets-26, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,811] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-26, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=26, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (38/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,827] INFO [LogLoader partition=__consumer_offsets-27, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,827] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-27, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=27, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (39/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,842] INFO [LogLoader partition=__consumer_offsets-28, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,859] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-28, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=28, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (40/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,869] INFO [LogLoader partition=__consumer_offsets-29, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,879] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-29, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=29, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 19ms (41/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,892] INFO [LogLoader partition=__consumer_offsets-3, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,892] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-3, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=3, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 19ms (42/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,918] INFO [LogLoader partition=__consumer_offsets-30, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,918] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-30, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=30, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 21ms (43/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,929] INFO [LogLoader partition=__consumer_offsets-31, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,929] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-31, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=31, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 16ms (44/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,949] INFO [LogLoader partition=__consumer_offsets-32, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,949] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-32, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=32, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (45/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:51,996] INFO Deleted producer state snapshot C:\tmp\kraft-combined-logs\__consumer_offsets-33\00000000000000000027.snapshot (org.apache.kafka.storage.internals.log.SnapshotFile)
+[2026-08-21 10:50:51,996] INFO [LogLoader partition=__consumer_offsets-33, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 54 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,996] INFO [LogLoader partition=__consumer_offsets-33, dir=C:\tmp\kraft-combined-logs] Reloading from producer snapshot and rebuilding producer state from offset 54 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:51,996] INFO [ProducerStateManager partition=__consumer_offsets-33] Loading producer state from snapshot file 'SnapshotFile(offset=54, file=C:\tmp\kraft-combined-logs\__consumer_offsets-33\00000000000000000054.snapshot)' (org.apache.kafka.storage.internals.log.ProducerStateManager)
+[2026-08-21 10:50:51,996] INFO [LogLoader partition=__consumer_offsets-33, dir=C:\tmp\kraft-combined-logs] Producer state recovery took 0ms for snapshot load and 0ms for segment recovery from offset 54 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,011] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-33, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=33, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=54) with 1 segments, local-log-start-offset 0 and log-end-offset 54 in 58ms (46/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,025] INFO [LogLoader partition=__consumer_offsets-34, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,025] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-34, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=34, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 23ms (47/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,041] INFO [LogLoader partition=__consumer_offsets-35, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,057] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-35, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=35, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 19ms (48/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,071] INFO [LogLoader partition=__consumer_offsets-36, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,078] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-36, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=36, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (49/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,086] INFO [LogLoader partition=__consumer_offsets-37, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,086] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-37, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=37, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (50/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,101] INFO [LogLoader partition=__consumer_offsets-38, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,117] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-38, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=38, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 21ms (51/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,132] INFO [LogLoader partition=__consumer_offsets-39, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,132] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-39, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=39, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (52/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,148] INFO [LogLoader partition=__consumer_offsets-4, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,148] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-4, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=4, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (53/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,164] INFO [LogLoader partition=__consumer_offsets-40, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,173] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-40, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=40, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 20ms (54/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,173] INFO [LogLoader partition=__consumer_offsets-41, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,189] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-41, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=41, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 16ms (55/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,206] INFO [LogLoader partition=__consumer_offsets-42, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,206] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-42, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=42, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (56/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,216] INFO [LogLoader partition=__consumer_offsets-43, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,216] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-43, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=43, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (57/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,232] INFO [LogLoader partition=__consumer_offsets-44, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,232] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-44, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=44, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 15ms (58/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,263] INFO [LogLoader partition=__consumer_offsets-45, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,270] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-45, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=45, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 24ms (59/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,274] INFO [LogLoader partition=__consumer_offsets-46, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,290] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-46, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=46, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 18ms (60/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,305] INFO [LogLoader partition=__consumer_offsets-47, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,305] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-47, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=47, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 22ms (61/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,319] INFO [LogLoader partition=__consumer_offsets-48, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,319] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-48, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=48, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 16ms (62/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,335] INFO [LogLoader partition=__consumer_offsets-49, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,345] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-49, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=49, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 20ms (63/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,360] INFO [LogLoader partition=__consumer_offsets-5, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,369] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-5, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=5, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 20ms (64/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,369] INFO [LogLoader partition=__consumer_offsets-6, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,385] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-6, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=6, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 17ms (65/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,395] INFO [LogLoader partition=__consumer_offsets-7, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,403] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-7, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=7, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 19ms (66/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,413] INFO [LogLoader partition=__consumer_offsets-8, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,413] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-8, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=8, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 15ms (67/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,429] INFO [LogLoader partition=__consumer_offsets-9, dir=C:\tmp\kraft-combined-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2026-08-21 10:50:52,429] INFO Completed load of Log(dir=C:\tmp\kraft-combined-logs\__consumer_offsets-9, topicId=sbgjCrMeQ92nPSwH4Yz-MA, topic=__consumer_offsets, partition=9, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments, local-log-start-offset 0 and log-end-offset 0 in 16ms (68/68 completed in C:\tmp\kraft-combined-logs) (kafka.log.LogManager)
+[2026-08-21 10:50:52,429] INFO Loaded 68 logs in 1880ms (kafka.log.LogManager)
+[2026-08-21 10:50:52,429] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+[2026-08-21 10:50:52,429] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+[2026-08-21 10:50:52,588] INFO [BrokerLifecycleManager id=1] The broker is in RECOVERY. (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:52,670] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner$CleanerThread)
+[2026-08-21 10:50:52,695] INFO [AddPartitionsToTxnSenderThread-1]: Starting (kafka.server.AddPartitionsToTxnManager)
+[2026-08-21 10:50:52,695] INFO [LogDirFailureHandler]: Starting (kafka.server.ReplicaManager$LogDirFailureHandler)
+[2026-08-21 10:50:52,695] INFO [GroupCoordinator 1]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,695] INFO [GroupCoordinator 1]: Startup complete. (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,695] INFO [TransactionCoordinator id=1] Starting up. (kafka.coordinator.transaction.TransactionCoordinator)
+[2026-08-21 10:50:52,705] INFO [TransactionCoordinator id=1] Startup complete. (kafka.coordinator.transaction.TransactionCoordinator)
+[2026-08-21 10:50:52,706] INFO [BrokerMetadataPublisher id=1] Updating metadata.version to 19 at offset OffsetAndEpoch(offset=41103, epoch=6). (kafka.server.metadata.BrokerMetadataPublisher)
+[2026-08-21 10:50:52,706] INFO [BrokerMetadataPublisher id=1] Resending BrokerRegistration with existing incarnation-id to inform the controller about log directories in the broker following metadata update: previousMetadataVersion: 3.0-IV1 newMetadataVersion: 3.7-IV4 (kafka.server.metadata.BrokerMetadataPublisher)
+[2026-08-21 10:50:52,736] INFO [TxnMarkerSenderThread-1]: Starting (kafka.coordinator.transaction.TransactionMarkerChannelManager)
+[2026-08-21 10:50:52,761] INFO [BrokerLifecycleManager id=1] Successfully registered broker 1 with broker epoch 41108 (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:52,767] INFO [BrokerLifecycleManager id=1] The broker is in RECOVERY. (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:52,795] INFO [Partition orders-retry-0 broker=1] Log loaded for partition orders-retry-0 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-13 broker=1] Log loaded for partition __consumer_offsets-13 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-46 broker=1] Log loaded for partition __consumer_offsets-46 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-9 broker=1] Log loaded for partition __consumer_offsets-9 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-42 broker=1] Log loaded for partition __consumer_offsets-42 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-21 broker=1] Log loaded for partition __consumer_offsets-21 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-17 broker=1] Log loaded for partition __consumer_offsets-17 with initial high watermark 3 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition orders-dlq-2 broker=1] Log loaded for partition orders-dlq-2 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-30 broker=1] Log loaded for partition __consumer_offsets-30 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-26 broker=1] Log loaded for partition __consumer_offsets-26 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition orders-1 broker=1] Log loaded for partition orders-1 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-5 broker=1] Log loaded for partition __consumer_offsets-5 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,811] INFO [Partition __consumer_offsets-38 broker=1] Log loaded for partition __consumer_offsets-38 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition signup-events-retry-0 broker=1] Log loaded for partition signup-events-retry-0 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-1 broker=1] Log loaded for partition __consumer_offsets-1 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-34 broker=1] Log loaded for partition __consumer_offsets-34 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-16 broker=1] Log loaded for partition __consumer_offsets-16 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition orders-retry-1 broker=1] Log loaded for partition orders-retry-1 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-45 broker=1] Log loaded for partition __consumer_offsets-45 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition signup-events-dlq-2 broker=1] Log loaded for partition signup-events-dlq-2 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-12 broker=1] Log loaded for partition __consumer_offsets-12 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-41 broker=1] Log loaded for partition __consumer_offsets-41 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,826] INFO [Partition __consumer_offsets-24 broker=1] Log loaded for partition __consumer_offsets-24 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-20 broker=1] Log loaded for partition __consumer_offsets-20 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-49 broker=1] Log loaded for partition __consumer_offsets-49 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-0 broker=1] Log loaded for partition __consumer_offsets-0 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-29 broker=1] Log loaded for partition __consumer_offsets-29 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-25 broker=1] Log loaded for partition __consumer_offsets-25 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-8 broker=1] Log loaded for partition __consumer_offsets-8 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition __consumer_offsets-37 broker=1] Log loaded for partition __consumer_offsets-37 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition signup-events-0 broker=1] Log loaded for partition signup-events-0 with initial high watermark 3 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,842] INFO [Partition orders-2 broker=1] Log loaded for partition orders-2 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition signup-events-retry-1 broker=1] Log loaded for partition signup-events-retry-1 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition __consumer_offsets-4 broker=1] Log loaded for partition __consumer_offsets-4 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition __consumer_offsets-33 broker=1] Log loaded for partition __consumer_offsets-33 with initial high watermark 54 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition orders-retry-2 broker=1] Log loaded for partition orders-retry-2 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition signup-events-dlq-1 broker=1] Log loaded for partition signup-events-dlq-1 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition __consumer_offsets-15 broker=1] Log loaded for partition __consumer_offsets-15 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition __consumer_offsets-48 broker=1] Log loaded for partition __consumer_offsets-48 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition __consumer_offsets-11 broker=1] Log loaded for partition __consumer_offsets-11 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,853] INFO [Partition __consumer_offsets-44 broker=1] Log loaded for partition __consumer_offsets-44 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,865] INFO [Partition __consumer_offsets-23 broker=1] Log loaded for partition __consumer_offsets-23 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,867] INFO [Partition __consumer_offsets-19 broker=1] Log loaded for partition __consumer_offsets-19 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,867] INFO [Partition orders-dlq-0 broker=1] Log loaded for partition orders-dlq-0 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,867] INFO [Partition __consumer_offsets-32 broker=1] Log loaded for partition __consumer_offsets-32 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,871] INFO [Partition __consumer_offsets-28 broker=1] Log loaded for partition __consumer_offsets-28 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,871] INFO [Partition __consumer_offsets-7 broker=1] Log loaded for partition __consumer_offsets-7 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,871] INFO [Partition __consumer_offsets-40 broker=1] Log loaded for partition __consumer_offsets-40 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,876] INFO [Partition signup-events-1 broker=1] Log loaded for partition signup-events-1 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,876] INFO [Partition signup-events-retry-2 broker=1] Log loaded for partition signup-events-retry-2 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,882] INFO [Partition __consumer_offsets-3 broker=1] Log loaded for partition __consumer_offsets-3 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,882] INFO [Partition __consumer_offsets-36 broker=1] Log loaded for partition __consumer_offsets-36 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition __consumer_offsets-47 broker=1] Log loaded for partition __consumer_offsets-47 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition signup-events-dlq-0 broker=1] Log loaded for partition signup-events-dlq-0 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition __consumer_offsets-14 broker=1] Log loaded for partition __consumer_offsets-14 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition __consumer_offsets-43 broker=1] Log loaded for partition __consumer_offsets-43 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition __consumer_offsets-10 broker=1] Log loaded for partition __consumer_offsets-10 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition __consumer_offsets-22 broker=1] Log loaded for partition __consumer_offsets-22 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,885] INFO [Partition orders-dlq-1 broker=1] Log loaded for partition orders-dlq-1 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-18 broker=1] Log loaded for partition __consumer_offsets-18 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-31 broker=1] Log loaded for partition __consumer_offsets-31 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-27 broker=1] Log loaded for partition __consumer_offsets-27 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-39 broker=1] Log loaded for partition __consumer_offsets-39 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition signup-events-2 broker=1] Log loaded for partition signup-events-2 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition orders-0 broker=1] Log loaded for partition orders-0 with initial high watermark 1 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-6 broker=1] Log loaded for partition __consumer_offsets-6 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-35 broker=1] Log loaded for partition __consumer_offsets-35 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,895] INFO [Partition __consumer_offsets-2 broker=1] Log loaded for partition __consumer_offsets-2 with initial high watermark 0 (kafka.cluster.Partition)
+[2026-08-21 10:50:52,911] INFO [ReplicaFetcherManager on broker 1] Removed fetcher for partitions Set(orders-retry-0, __consumer_offsets-13, __consumer_offsets-46, __consumer_offsets-9, __consumer_offsets-42, __consumer_offsets-21, __consumer_offsets-17, orders-dlq-2, __consumer_offsets-30, __consumer_offsets-26, orders-1, __consumer_offsets-5, __consumer_offsets-38, __consumer_offsets-1, signup-events-retry-0, __consumer_offsets-34, __consumer_offsets-16, orders-retry-1, __consumer_offsets-45, signup-events-dlq-2, __consumer_offsets-12, __consumer_offsets-41, __consumer_offsets-24, __consumer_offsets-20, __consumer_offsets-49, __consumer_offsets-0, __consumer_offsets-29, __consumer_offsets-25, __consumer_offsets-8, __consumer_offsets-37, signup-events-0, orders-2, __consumer_offsets-4, signup-events-retry-1, __consumer_offsets-33, orders-retry-2, signup-events-dlq-1, __consumer_offsets-15, __consumer_offsets-48, __consumer_offsets-11, __consumer_offsets-44, __consumer_offsets-23, __consumer_offsets-19, orders-dlq-0, __consumer_offsets-32, __consumer_offsets-28, __consumer_offsets-7, __consumer_offsets-40, signup-events-1, __consumer_offsets-3, signup-events-retry-2, __consumer_offsets-36, __consumer_offsets-47, signup-events-dlq-0, __consumer_offsets-14, __consumer_offsets-43, __consumer_offsets-10, __consumer_offsets-22, orders-dlq-1, __consumer_offsets-18, __consumer_offsets-31, __consumer_offsets-27, __consumer_offsets-39, signup-events-2, orders-0, __consumer_offsets-6, __consumer_offsets-35, __consumer_offsets-2) (kafka.server.ReplicaFetcherManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 13 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-13 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 46 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-46 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 9 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-9 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 42 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-42 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 21 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-21 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 17 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-17 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 30 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-30 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 26 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-26 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 5 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-5 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 38 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-38 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,953] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 1 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,953] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-1 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 34 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-34 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 16 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-16 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 45 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-45 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 12 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 41 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-41 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 24 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-24 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 20 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-20 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 49 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-49 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 0 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-0 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,963] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 29 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,963] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-29 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 25 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-25 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 8 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-8 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 37 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-37 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 4 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-4 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 33 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-33 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 15 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-15 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 48 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-48 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 11 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-11 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 44 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-44 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 23 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-23 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 19 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-19 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 32 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-32 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 28 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-28 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 7 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-7 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 40 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-40 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 3 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-3 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 36 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-36 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-13 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,964] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 47 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-47 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 14 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-14 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-46 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 43 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-43 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-9 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 10 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-10 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-42 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-21 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 22 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-17 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,967] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-22 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-30 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 18 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-18 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-26 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 31 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-31 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 27 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-5 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-27 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-38 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,968] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 39 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-39 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 6 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-6 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-1 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 35 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-35 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupCoordinator 1]: Resigned as the group coordinator for partition 2 in epoch OptionalInt[11] (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Scheduling unloading of offsets and group metadata from __consumer_offsets-2 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-34 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-16 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-45 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-12 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-41 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-24 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-20 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-49 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-0 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-29 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-25 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-8 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-37 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-4 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-33 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-15 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-48 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-11 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-44 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-23 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-19 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-32 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-28 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-7 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-40 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-3 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-36 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-47 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-14 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-43 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-10 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-22 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-18 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-31 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-27 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,969] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-39 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,975] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-6 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,975] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-35 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,975] INFO [GroupMetadataManager brokerId=1] Finished unloading __consumer_offsets-2 for coordinator epoch OptionalInt[11]. Removed 0 cached offsets and 0 cached groups. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:52,983] INFO [DynamicConfigPublisher broker id=1] Updating topic __consumer_offsets with new configuration : compression.type -> producer,cleanup.policy -> compact,segment.bytes -> 104857600 (kafka.server.metadata.DynamicConfigPublisher)
+[2026-08-21 10:50:52,995] INFO [BrokerServer id=1] Finished waiting for the initial broker metadata update to be published (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,003] INFO KafkaConfig values: 
+	advertised.listeners = PLAINTEXT://localhost:9092
+	alter.config.policy.class.name = null
+	alter.log.dirs.replication.quota.window.num = 11
+	alter.log.dirs.replication.quota.window.size.seconds = 1
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.include.jmx.reporter = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.heartbeat.interval.ms = 2000
+	broker.id = 1
+	broker.id.generation.enable = true
+	broker.rack = null
+	broker.session.timeout.ms = 9000
+	client.quota.callback.class = null
+	compression.type = producer
+	connection.failed.authentication.delay.ms = 100
+	connections.max.idle.ms = 600000
+	connections.max.reauth.ms = 0
+	control.plane.listener.name = null
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.listener.names = CONTROLLER
+	controller.quorum.append.linger.ms = 25
+	controller.quorum.election.backoff.max.ms = 1000
+	controller.quorum.election.timeout.ms = 1000
+	controller.quorum.fetch.timeout.ms = 2000
+	controller.quorum.request.timeout.ms = 2000
+	controller.quorum.retry.backoff.ms = 20
+	controller.quorum.voters = [1@localhost:9093]
+	controller.quota.window.num = 11
+	controller.quota.window.size.seconds = 1
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delegation.token.expiry.check.interval.ms = 3600000
+	delegation.token.expiry.time.ms = 86400000
+	delegation.token.master.key = null
+	delegation.token.max.lifetime.ms = 604800000
+	delegation.token.secret.key = null
+	delete.records.purgatory.purge.interval.requests = 1
+	delete.topic.enable = true
+	early.start.listeners = null
+	eligible.leader.replicas.enable = false
+	fetch.max.bytes = 57671680
+	fetch.purgatory.purge.interval.requests = 1000
+	group.consumer.assignors = [org.apache.kafka.coordinator.group.assignor.UniformAssignor, org.apache.kafka.coordinator.group.assignor.RangeAssignor]
+	group.consumer.heartbeat.interval.ms = 5000
+	group.consumer.max.heartbeat.interval.ms = 15000
+	group.consumer.max.session.timeout.ms = 60000
+	group.consumer.max.size = 2147483647
+	group.consumer.min.heartbeat.interval.ms = 5000
+	group.consumer.min.session.timeout.ms = 45000
+	group.consumer.session.timeout.ms = 45000
+	group.coordinator.new.enable = false
+	group.coordinator.rebalance.protocols = [classic]
+	group.coordinator.threads = 1
+	group.initial.rebalance.delay.ms = 3000
+	group.max.session.timeout.ms = 1800000
+	group.max.size = 2147483647
+	group.min.session.timeout.ms = 6000
+	initial.broker.registration.timeout.ms = 60000
+	inter.broker.listener.name = PLAINTEXT
+	inter.broker.protocol.version = 3.7-IV4
+	kafka.metrics.polling.interval.secs = 10
+	kafka.metrics.reporters = []
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
+	listeners = PLAINTEXT://:9092,CONTROLLER://:9093
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 134217728
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = C:\tmp\kraft-combined-logs
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.flush.start.offset.checkpoint.interval.ms = 60000
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.local.retention.bytes = -2
+	log.local.retention.ms = -2
+	log.message.downconversion.enable = true
+	log.message.format.version = 3.0-IV1
+	log.message.timestamp.after.max.ms = 9223372036854775807
+	log.message.timestamp.before.max.ms = 9223372036854775807
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connection.creation.rate = 2147483647
+	max.connections = 2147483647
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	max.incremental.fetch.session.cache.slots = 1000
+	message.max.bytes = 1048588
+	metadata.log.dir = null
+	metadata.log.max.record.bytes.between.snapshots = 20971520
+	metadata.log.max.snapshot.interval.ms = 3600000
+	metadata.log.segment.bytes = 1073741824
+	metadata.log.segment.min.bytes = 8388608
+	metadata.log.segment.ms = 604800000
+	metadata.max.idle.interval.ms = 500
+	metadata.max.retention.bytes = 104857600
+	metadata.max.retention.ms = 604800000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	node.id = 1
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.alter.log.dirs.threads = null
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 10080
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 1
+	offsets.topic.segment.bytes = 104857600
+	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+	password.encoder.iterations = 4096
+	password.encoder.key.length = 128
+	password.encoder.keyfactory.algorithm = null
+	password.encoder.old.secret = null
+	password.encoder.secret = null
+	principal.builder.class = class org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder
+	process.roles = [broker, controller]
+	producer.id.expiration.check.interval.ms = 600000
+	producer.id.expiration.ms = 86400000
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.request.bytes = -1
+	queued.max.requests = 500
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	remote.log.index.file.cache.total.size.bytes = 1073741824
+	remote.log.manager.task.interval.ms = 30000
+	remote.log.manager.task.retry.backoff.max.ms = 30000
+	remote.log.manager.task.retry.backoff.ms = 500
+	remote.log.manager.task.retry.jitter = 0.2
+	remote.log.manager.thread.pool.size = 10
+	remote.log.metadata.custom.metadata.max.bytes = 128
+	remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+	remote.log.metadata.manager.class.path = null
+	remote.log.metadata.manager.impl.prefix = rlmm.config.
+	remote.log.metadata.manager.listener.name = null
+	remote.log.reader.max.pending.tasks = 100
+	remote.log.reader.threads = 10
+	remote.log.storage.manager.class.name = null
+	remote.log.storage.manager.class.path = null
+	remote.log.storage.manager.impl.prefix = rsm.config.
+	remote.log.storage.system.enable = false
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 30000
+	replica.selector.class = null
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.client.callback.handler.class = null
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism.controller.protocol = GSSAPI
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	sasl.server.callback.handler.class = null
+	sasl.server.max.receive.size = 524288
+	security.inter.broker.protocol = PLAINTEXT
+	security.providers = null
+	server.max.startup.time.ms = 9223372036854775807
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	socket.listen.backlog.size = 50
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.allow.dn.changes = false
+	ssl.allow.san.changes = false
+	ssl.cipher.suites = []
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.principal.mapping.rules = DEFAULT
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	telemetry.max.bytes = 1048576
+	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+	transaction.max.timeout.ms = 900000
+	transaction.partition.verification.enable = true
+	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+	transaction.state.log.load.buffer.size = 5242880
+	transaction.state.log.min.isr = 1
+	transaction.state.log.num.partitions = 50
+	transaction.state.log.replication.factor = 1
+	transaction.state.log.segment.bytes = 104857600
+	transactional.id.expiration.ms = 604800000
+	unclean.leader.election.enable = false
+	unstable.api.versions.enable = false
+	unstable.metadata.versions.enable = false
+	zookeeper.clientCnxnSocket = null
+	zookeeper.connect = null
+	zookeeper.connection.timeout.ms = null
+	zookeeper.max.in.flight.requests = 10
+	zookeeper.metadata.migration.enable = false
+	zookeeper.metadata.migration.min.batch.size = 200
+	zookeeper.session.timeout.ms = 18000
+	zookeeper.set.acl = false
+	zookeeper.ssl.cipher.suites = null
+	zookeeper.ssl.client.enable = false
+	zookeeper.ssl.crl.enable = false
+	zookeeper.ssl.enabled.protocols = null
+	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+	zookeeper.ssl.keystore.location = null
+	zookeeper.ssl.keystore.password = null
+	zookeeper.ssl.keystore.type = null
+	zookeeper.ssl.ocsp.enable = false
+	zookeeper.ssl.protocol = TLSv1.2
+	zookeeper.ssl.truststore.location = null
+	zookeeper.ssl.truststore.password = null
+	zookeeper.ssl.truststore.type = null
+ (kafka.server.KafkaConfig)
+[2026-08-21 10:50:53,003] INFO [BrokerServer id=1] Waiting for the broker to be unfenced (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,094] INFO [BrokerLifecycleManager id=1] The broker has been unfenced. Transitioning from RECOVERY to RUNNING. (kafka.server.BrokerLifecycleManager)
+[2026-08-21 10:50:53,094] INFO [BrokerServer id=1] Finished waiting for the broker to be unfenced (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,094] INFO authorizerStart completed for endpoint PLAINTEXT. Endpoint is now READY. (org.apache.kafka.server.network.EndpointReadyFutures)
+[2026-08-21 10:50:53,094] INFO [SocketServer listenerType=BROKER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+[2026-08-21 10:50:53,094] INFO [ReplicaFetcherManager on broker 1] Removed fetcher for partitions Set(orders-retry-0, __consumer_offsets-13, __consumer_offsets-46, __consumer_offsets-9, __consumer_offsets-42, __consumer_offsets-21, __consumer_offsets-17, orders-dlq-2, __consumer_offsets-30, __consumer_offsets-26, orders-1, __consumer_offsets-5, __consumer_offsets-38, signup-events-retry-0, __consumer_offsets-1, __consumer_offsets-34, __consumer_offsets-16, orders-retry-1, __consumer_offsets-45, signup-events-dlq-2, __consumer_offsets-12, __consumer_offsets-41, __consumer_offsets-24, __consumer_offsets-20, __consumer_offsets-49, __consumer_offsets-0, __consumer_offsets-29, __consumer_offsets-25, __consumer_offsets-8, __consumer_offsets-37, signup-events-0, orders-2, signup-events-retry-1, __consumer_offsets-4, __consumer_offsets-33, orders-retry-2, signup-events-dlq-1, __consumer_offsets-15, __consumer_offsets-48, __consumer_offsets-11, __consumer_offsets-44, __consumer_offsets-23, __consumer_offsets-19, orders-dlq-0, __consumer_offsets-32, __consumer_offsets-28, __consumer_offsets-7, __consumer_offsets-40, signup-events-1, signup-events-retry-2, __consumer_offsets-3, __consumer_offsets-36, __consumer_offsets-47, signup-events-dlq-0, __consumer_offsets-14, __consumer_offsets-43, __consumer_offsets-10, __consumer_offsets-22, orders-dlq-1, __consumer_offsets-18, __consumer_offsets-31, __consumer_offsets-27, __consumer_offsets-39, signup-events-2, orders-0, __consumer_offsets-6, __consumer_offsets-35, __consumer_offsets-2) (kafka.server.ReplicaFetcherManager)
+[2026-08-21 10:50:53,098] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.DataPlaneAcceptor)
+[2026-08-21 10:50:53,098] INFO [BrokerServer id=1] Waiting for all of the authorizer futures to be completed (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,098] INFO [BrokerServer id=1] Finished waiting for all of the authorizer futures to be completed (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,098] INFO [BrokerServer id=1] Waiting for all of the SocketServer Acceptors to be started (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,098] INFO [BrokerServer id=1] Finished waiting for all of the SocketServer Acceptors to be started (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,098] INFO [BrokerServer id=1] Transition from STARTING to STARTED (kafka.server.BrokerServer)
+[2026-08-21 10:50:53,098] INFO Kafka version: 3.7.0 (org.apache.kafka.common.utils.AppInfoParser)
+[2026-08-21 10:50:53,098] INFO Kafka commitId: 2ae524ed625438c5 (org.apache.kafka.common.utils.AppInfoParser)
+[2026-08-21 10:50:53,098] INFO Kafka startTimeMs: 1787289653098 (org.apache.kafka.common.utils.AppInfoParser)
+[2026-08-21 10:50:53,102] INFO [KafkaRaftServer nodeId=1] Kafka Server started (kafka.server.KafkaRaftServer)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 13 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-13 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 46 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-46 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 9 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-9 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 42 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-42 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 21 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-21 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 17 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-17 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 30 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-30 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 26 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,496] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-26 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,496] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 5 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-5 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 38 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-38 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 1 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-1 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 34 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-34 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 16 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-16 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 45 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-45 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 12 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-12 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 41 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-41 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 24 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-24 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 20 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-20 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 49 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-49 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 0 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-0 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 29 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-29 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 25 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-25 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 8 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-8 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 37 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-37 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 4 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-4 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 33 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-33 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 15 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-15 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 48 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-48 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 11 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-11 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 44 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-44 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 23 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-23 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 19 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-19 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 32 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-32 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 28 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-28 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 7 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-7 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 40 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-40 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 3 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-3 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 36 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-36 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 47 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-47 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 14 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-14 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 43 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-43 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 10 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-10 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 22 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-22 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 18 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-18 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 31 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-31 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 27 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-27 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,512] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 39 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,512] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-39 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,528] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 6 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,528] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-6 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,528] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 35 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,528] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-35 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,528] INFO [GroupCoordinator 1]: Elected as the group coordinator for partition 2 in epoch 12 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,528] INFO [GroupMetadataManager brokerId=1] Scheduling loading of offsets and group metadata from __consumer_offsets-2 for epoch 12 (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,543] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-13 in 47 milliseconds for epoch 12, of which 32 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,543] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-46 in 47 milliseconds for epoch 12, of which 47 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,543] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-9 in 47 milliseconds for epoch 12, of which 47 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,543] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-42 in 47 milliseconds for epoch 12, of which 47 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,543] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-21 in 47 milliseconds for epoch 12, of which 47 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,618] INFO Loaded member MemberMetadata(memberId=console-consumer-47f5970f-1233-4bd0-86e7-9d7de79d4ada, groupInstanceId=None, clientId=console-consumer, clientHost=/127.0.0.1, sessionTimeoutMs=45000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group console-consumer-81025 with generation 1. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-17 in 131 milliseconds for epoch 12, of which 47 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-30 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-26 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-5 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-38 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-1 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-34 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-16 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-45 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-12 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-41 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-24 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-20 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-49 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-0 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-29 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-25 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-8 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-37 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-4 in 115 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,627] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-a95f4ba4-faf5-44f1-866e-c9804db80230, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 1. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-0cddb9a6-edb7-4972-bbdd-9a8907d95cca, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 3. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-0cddb9a6-edb7-4972-bbdd-9a8907d95cca, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 4. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-77fd2400-a96e-4e89-b6b9-4d81fbdd93ad, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 4. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-77fd2400-a96e-4e89-b6b9-4d81fbdd93ad, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 5. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-c24f8c3a-64ef-4dbe-ac85-305f2d52a8e2, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 6. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-77fd2400-a96e-4e89-b6b9-4d81fbdd93ad, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 6. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-dc306aab-f897-4c3f-bea1-4a590da03fee, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 8. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-7bbcc7da-076f-48d1-a8aa-1be89b52da7c, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 9. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-0f96629e-b024-4e4a-9268-06226b76c74a, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 11. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-039ac3e6-c00b-4921-8514-20da4d076ebc, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 12. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-24b9a49f-71e9-42d2-bbe0-834bbffb0c67, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 14. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-2f0cbd13-8735-466b-8b5b-130e97db188b, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 16. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-549fe7a4-5eff-4ce5-b6c4-4a1209aed663, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 18. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO Loaded member MemberMetadata(memberId=kafka-python-2.3.1-d40cbfc5-6242-4496-b8b8-e66fa307dde0, groupInstanceId=None, clientId=kafka-python-2.3.1, clientHost=/0:0:0:0:0:0:0:1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range)) in group orders_group with generation 20. (kafka.coordinator.group.GroupMetadata$)
+[2026-08-21 10:50:53,643] INFO [GroupCoordinator 1]: Loading group metadata for orders_group with generation 21 (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-33 in 131 milliseconds for epoch 12, of which 115 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-15 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-48 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-11 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-44 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-23 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-19 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-32 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-28 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-7 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-40 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,643] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-3 in 131 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-36 in 146 milliseconds for epoch 12, of which 131 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-47 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-14 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-43 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-10 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-22 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-18 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-31 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-27 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-39 in 146 milliseconds for epoch 12, of which 146 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-6 in 130 milliseconds for epoch 12, of which 130 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-35 in 130 milliseconds for epoch 12, of which 130 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:50:53,658] INFO [GroupMetadataManager brokerId=1] Finished loading offsets and group metadata from __consumer_offsets-2 in 130 milliseconds for epoch 12, of which 130 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2026-08-21 10:52:57,242] INFO [GroupCoordinator 1]: Dynamic member with unknown member id joins group orders_group in Empty state. Created a new member id kafka-python-2.3.1-930c6359-486c-4ab7-a559-4f5f71ca6118 and request the member to rejoin with this id. (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:52:57,253] INFO [GroupCoordinator 1]: Preparing to rebalance group orders_group in state PreparingRebalance with old generation 21 (__consumer_offsets-33) (reason: Adding new member kafka-python-2.3.1-930c6359-486c-4ab7-a559-4f5f71ca6118 with group instance id None; client reason: not provided) (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:00,318] INFO [GroupCoordinator 1]: Stabilized group orders_group generation 22 (__consumer_offsets-33) with 1 members (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:00,334] INFO [GroupCoordinator 1]: Assignment received from leader kafka-python-2.3.1-930c6359-486c-4ab7-a559-4f5f71ca6118 for group orders_group for generation 22. The group has 1 members, 0 of which are static. (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:30,145] INFO [GroupCoordinator 1]: Dynamic member with unknown member id joins group orders_group in Stable state. Created a new member id kafka-python-2.3.1-f82615a2-a9ad-4c2f-981c-ed85f8903a0b and request the member to rejoin with this id. (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:30,148] INFO [GroupCoordinator 1]: Preparing to rebalance group orders_group in state PreparingRebalance with old generation 22 (__consumer_offsets-33) (reason: Adding new member kafka-python-2.3.1-f82615a2-a9ad-4c2f-981c-ed85f8903a0b with group instance id None; client reason: not provided) (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:31,576] INFO [GroupCoordinator 1]: Member kafka-python-2.3.1-930c6359-486c-4ab7-a559-4f5f71ca6118 in group orders_group has failed, removing it from the group (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:31,592] INFO [GroupCoordinator 1]: Stabilized group orders_group generation 23 (__consumer_offsets-33) with 1 members (kafka.coordinator.group.GroupCoordinator)
+[2026-08-21 10:53:31,599] INFO [GroupCoordinator 1]: Assignment received from leader kafka-python-2.3.1-f82615a2-a9ad-4c2f-981c-ed85f8903a0b for group orders_group for generation 23. The group has 1 members, 0 of which are static. (kafka.coordinator.group.GroupCoordinator)

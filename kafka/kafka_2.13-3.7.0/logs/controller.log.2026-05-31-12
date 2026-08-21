@@ -1,0 +1,3 @@
+[2026-05-31 12:52:24,016] INFO [QuorumController id=1] Unfenced broker 1 has requested and been granted an immediate shutdown. (org.apache.kafka.controller.BrokerHeartbeatManager)
+[2026-05-31 12:52:24,026] INFO [QuorumController id=1] Replayed BrokerRegistrationChangeRecord modifying the registration for broker 1: BrokerRegistrationChangeRecord(brokerId=1, brokerEpoch=45665, fenced=1, inControlledShutdown=0, logDirs=[]) (org.apache.kafka.controller.ClusterControlManager)
+[2026-05-31 12:52:24,688] INFO [QuorumController id=1] writeNoOpRecord: event unable to start processing because of RejectedExecutionException (treated as TimeoutException). (org.apache.kafka.controller.QuorumController)

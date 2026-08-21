@@ -31,10 +31,12 @@ for message in consumer:
             payload = data["payload"]
             cursor.execute(
                 """
-                INSERT INTO orders (order_id, customer_name, amount)
-                VALUES (%s, %s, %s)
+                INSERT INTO orders (event_id, order_id, customer_name, amount)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (event_id) DO NOTHING
                 """,
                 (
+                    data["event_id"],
                     payload["order_id"],
                     payload["customer_name"],
                     payload["amount"]

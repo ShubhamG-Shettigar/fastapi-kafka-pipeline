@@ -1,0 +1,6 @@
+[2026-07-05 12:24:34,428] WARN [BrokerLifecycleManager id=1] Broker 1 sent a heartbeat request but received error REQUEST_TIMED_OUT. (kafka.server.BrokerLifecycleManager)
+[2026-07-05 12:47:03,187] INFO [SnapshotGenerator id=1] Creating new KRaft snapshot file snapshot 00000000000000013702-0000000002 because we have waited at least 60 minute(s). (org.apache.kafka.image.publisher.SnapshotGenerator)
+[2026-07-05 12:47:03,453] INFO [SnapshotEmitter id=1] Successfully wrote snapshot 00000000000000013702-0000000002 (org.apache.kafka.image.publisher.SnapshotEmitter)
+[2026-07-05 12:59:58,084] INFO [GroupCoordinator 1]: Member kafka-python-2.3.1-dd2235b3-069c-4d60-987b-9c36e3241b0d in group orders_group has failed, removing it from the group (kafka.coordinator.group.GroupCoordinator)
+[2026-07-05 12:59:58,104] INFO [GroupCoordinator 1]: Preparing to rebalance group orders_group in state PreparingRebalance with old generation 5 (__consumer_offsets-33) (reason: removing member kafka-python-2.3.1-dd2235b3-069c-4d60-987b-9c36e3241b0d on heartbeat expiration) (kafka.coordinator.group.GroupCoordinator)
+[2026-07-05 12:59:58,108] INFO [GroupCoordinator 1]: Group orders_group with generation 6 is now empty (__consumer_offsets-33) (kafka.coordinator.group.GroupCoordinator)

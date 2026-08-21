@@ -24,10 +24,11 @@ def create_orders_table():
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS orders (
                 id SERIAL PRIMARY KEY,
+                event_id VARCHAR(100) UNIQUE NOT NULL,
                 order_id VARCHAR(100) UNIQUE NOT NULL,
                 customer_name VARCHAR(100) NOT NULL,
                 amount NUMERIC(10, 2) NOT NULL
-            )
+                )
         """)
         connection.commit()
     finally:

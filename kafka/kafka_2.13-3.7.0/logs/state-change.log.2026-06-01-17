@@ -1,0 +1,7 @@
+[2026-06-01 17:54:28,349] INFO [Broker id=1] Transitioning 3 partition(s) to local leaders. (state.change.logger)
+[2026-06-01 17:54:28,375] INFO [Broker id=1] Creating new partition signup-events-2 with topic id HkjKts6PS3mD089enmEMpg. (state.change.logger)
+[2026-06-01 17:54:28,480] INFO [Broker id=1] Leader signup-events-2 with topic id Some(HkjKts6PS3mD089enmEMpg) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader None and previous leader epoch was -1. (state.change.logger)
+[2026-06-01 17:54:28,500] INFO [Broker id=1] Creating new partition signup-events-0 with topic id HkjKts6PS3mD089enmEMpg. (state.change.logger)
+[2026-06-01 17:54:28,521] INFO [Broker id=1] Leader signup-events-0 with topic id Some(HkjKts6PS3mD089enmEMpg) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader None and previous leader epoch was -1. (state.change.logger)
+[2026-06-01 17:54:28,527] INFO [Broker id=1] Creating new partition signup-events-1 with topic id HkjKts6PS3mD089enmEMpg. (state.change.logger)
+[2026-06-01 17:54:28,540] INFO [Broker id=1] Leader signup-events-1 with topic id Some(HkjKts6PS3mD089enmEMpg) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [1], adding replicas [] and removing replicas [] . Previous leader None and previous leader epoch was -1. (state.change.logger)

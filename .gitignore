@@ -1,10 +1,5 @@
-__pycache__/
-*.pyc
-*.db
-venv/
-.env
-.idea/
-.vscode/
-kafka/
-
-
+fastapi/.env
+fastapi/__pycache__/
+fastapi/**/*.pyc
+fastapi/.venv/
+fastapi/venv/

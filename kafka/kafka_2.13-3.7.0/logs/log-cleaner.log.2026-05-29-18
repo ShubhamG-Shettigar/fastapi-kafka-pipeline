@@ -1,0 +1,2 @@
+[2026-05-29 18:12:00,836] INFO Starting the log cleaner (kafka.log.LogCleaner)
+[2026-05-29 18:57:17,795] INFO Shutting down the log cleaner. (kafka.log.LogCleaner)
