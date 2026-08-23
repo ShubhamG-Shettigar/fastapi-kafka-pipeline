@@ -29,3 +29,9 @@ class OrderRequest(BaseModel):
     order_id: str
     customer_name: str
     amount: float
+
+class OrderResponse(BaseModel):
+    order_id: str
+    customer_name: str
+    amount: float
+    event_id: str

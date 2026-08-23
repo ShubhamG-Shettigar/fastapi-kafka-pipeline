@@ -30,6 +30,7 @@ def create_orders_table():
                 amount NUMERIC(10, 2) NOT NULL
                 )
         """)
+        
         connection.commit()
     finally:
         cursor.close()

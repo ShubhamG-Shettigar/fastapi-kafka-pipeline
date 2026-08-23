@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from jose import jwt
 from passlib.context import CryptContext
 from app.configs.settings import settings
+from app.repositories.user_repository import get_user_by_username
 
 pwd_context = CryptContext(
     schemes=["bcrypt"],
@@ -34,3 +35,6 @@ def verify_token(token: str):
         algorithms=[settings.jwt_algorithm]
     )
     return payload
+    
+def get_user(username: str):
+    return get_user_by_username(username)

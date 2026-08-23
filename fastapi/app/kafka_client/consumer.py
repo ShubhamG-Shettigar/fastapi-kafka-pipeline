@@ -13,9 +13,9 @@ consumer = KafkaConsumer(
     settings.kafka_orders_topic,
     settings.kafka_retry_topic,
     bootstrap_servers=settings.kafka_bootstrap_servers,
-    auto_offset_reset="earliest",
+    auto_offset_reset="latest",
     enable_auto_commit=False,
-    group_id="orders_group",
+    group_id="orders_group_v2",
     value_deserializer=lambda message: json.loads(
         message.decode("utf-8")
     )
@@ -31,15 +31,16 @@ for message in consumer:
             payload = data["payload"]
             cursor.execute(
                 """
-                INSERT INTO orders (event_id, order_id, customer_name, amount)
-                VALUES (%s, %s, %s, %s)
+                INSERT INTO orders (event_id, order_id, customer_name, amount, user_id)
+                VALUES (%s, %s, %s, %s, %s)
                 ON CONFLICT (event_id) DO NOTHING
                 """,
                 (
                     data["event_id"],
                     payload["order_id"],
                     payload["customer_name"],
-                    payload["amount"]
+                    payload["amount"], 
+                    payload["user_id"]
                 )
             )
             connection.commit()
