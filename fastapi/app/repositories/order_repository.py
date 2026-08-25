@@ -32,7 +32,7 @@ def get_order_by_id(order_id: str, user_id: int):
                 order_id,
                 customer_name,
                 amount,
-                event_id
+                event_id, status
             FROM orders
             WHERE order_id = %s
             AND user_id = %s;
