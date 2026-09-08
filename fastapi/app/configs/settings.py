@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     kafka_retry_topic: str = "orders-retry"
     kafka_dlq_topic: str = "orders-dlq"
     kafka_order_status_topic: str = "order-status-events"
+    kafka_order_status_retry_topic: str = "order-status-retry"
+    kafka_order_status_dlq_topic: str = "order-status-dlq"
 
     # PostgreSQL
     postgres_host: str = "localhost"

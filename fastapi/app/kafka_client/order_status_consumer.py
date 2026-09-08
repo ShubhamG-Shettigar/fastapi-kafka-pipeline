@@ -3,6 +3,8 @@ import logging
 from kafka import KafkaConsumer
 from app.configs.settings import settings
 from app.db.postgres import get_connection
+from app.kafka_client.retry_handler import handle_failure
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -10,7 +12,7 @@ logging.basicConfig(
 )
 
 consumer = KafkaConsumer(
-    settings.kafka_order_status_topic,
+    settings.kafka_order_status_topic, settings.kafka_order_status_retry_topic,
     bootstrap_servers=settings.kafka_bootstrap_servers,
     auto_offset_reset="earliest",
     enable_auto_commit=False,
@@ -30,7 +32,7 @@ for message in consumer:
             order_id = data["payload"]["order_id"]
             cursor.execute(
             """
-            UPDATE orders
+            UPDATE orders_wrong
             SET status = 'CONFIRMED'
             WHERE order_id = %s
             """,
@@ -44,3 +46,6 @@ for message in consumer:
         logging.info(f"Offset committed = {message.offset}")
     except Exception as e:
         logging.error(f"Status event processing failed: {e}")
+        result = handle_failure(data, settings.kafka_order_status_retry_topic, settings.kafka_order_status_dlq_topic)
+        consumer.commit()
+        logging.info(f"Event handling result = {result}")

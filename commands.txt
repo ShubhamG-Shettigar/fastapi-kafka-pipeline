@@ -36,13 +36,11 @@ Delete the folder inside tmp folder
 a. bin/kafka-storage.sh random-uuid 
 b. bin/kafka-storage.sh format -t <uuid> -c config/kraft/server.properties
 
-bin/kafka-storage.sh format -t 7B9ZBQWMRh2kmSUPPwT6DA -c config/kraft/server.properties
-bin/kafka-storage.sh format -t hzBL6qDlRSyCArVu-FCvrg -c config/kraft/server.properties
-bin/kafka-storage.sh format -t 2vysctXrShmVFeUWsK6sRA -c config/kraft/server.properties
+bin/kafka-storage.sh format -t dURndWtLRTuJXFRke4nNYQ -c config/kraft/server.properties
 
 
 
 Consumer
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group order_group
-kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic signup-events --from-beginning
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order-status-dlq --from-beginning
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic signup-events --from-beginning --property print.partition=true --property print.offset=true --property print.timestamp=true
