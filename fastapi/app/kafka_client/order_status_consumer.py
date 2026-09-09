@@ -30,19 +30,20 @@ for message in consumer:
         cursor = connection.cursor()
         try:
             order_id = data["payload"]["order_id"]
+            status = data["payload"]["status"]
             cursor.execute(
             """
-            UPDATE orders_wrong
-            SET status = 'CONFIRMED'
+            UPDATE orders
+            SET status = %s
             WHERE order_id = %s
             """,
-            (order_id,))
+            (status, order_id))
             connection.commit()
         finally:
             cursor.close()
             connection.close()
         consumer.commit()
-        logging.info(f"Order {order_id} marked as CONFIRMED")
+        logging.info(f"Order {order_id} marked as {status}")
         logging.info(f"Offset committed = {message.offset}")
     except Exception as e:
         logging.error(f"Status event processing failed: {e}")

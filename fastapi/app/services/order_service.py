@@ -48,9 +48,18 @@ def create_order_status_event(order_id: str, status: str):
         event_version=1,
         timestamp=datetime.now(timezone.utc),
         source="order-api",
-        payload={"order_id": order_id}
+        payload={"order_id": order_id, "status": status}
     )
     publish_events(event.model_dump(mode="json"), settings.kafka_order_status_topic)
+    return event
+    
+def change_order_status(order_id: str, user_id: int, new_status: str):
+    order = get_user_order(order_id, user_id)
+    if not order:
+        return None
+    if not is_valid_transition(order["status"], new_status):
+        return False
+    event = create_order_status_event(order_id, new_status)
     return event
     
     

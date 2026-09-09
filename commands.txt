@@ -4,8 +4,11 @@ bin/kafka-server-start.sh config/kraft/server.properties
 Step 2. Producer start inside FastAPI folder
 uvicorn app.main:app --reload
 
-Step 3. Consumer start inside FastAPI folder
+Step 3. Orders Consumer start inside FastAPI folder
 python -m app.kafka_client.consumer
+
+Order consumer status start
+python -m app.kafka_client.order_status_consumer
 
 Step 4. From prometheus downloads folder
 prometheus.exe --config.file=C:\Users\HP\Desktop\Project\fastapi\prometheus.yml
